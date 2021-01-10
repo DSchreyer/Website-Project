@@ -75,6 +75,10 @@ hr {
   overflow: visible;
 }
 
+hr.dashed {
+  border-top: 1px dotted;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1588,6 +1592,7 @@ input[type=button].btn-block {
   margin-top: 0;
   margin-bottom: 0.125rem;
 }
+
 .dropup .dropdown-toggle::after {
   display: inline-block;
   margin-left: 0.255em;
@@ -8574,6 +8579,7 @@ header.masthead {
 }
 header.masthead h1 {
   font-size: 2.25rem;
+  text-shadow: 2px 2px #f4623a;
 }
 @media (min-width: 992px) {
   header.masthead {
@@ -8745,6 +8751,7 @@ section#experiences .column-location-date {
 }
 section#experiences .column-details {
   flex: 2;
+
 }
 
 section#experiences h5 {
@@ -8771,6 +8778,10 @@ section#experiences p {
   }
   section#experiences .column-details {
     margin-left: 20px;
+    order: 2;
+  }
+  .column-location-date {
+    order: 1;
   }
 }
 @media (max-width: 600px){
