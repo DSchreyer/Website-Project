@@ -7,17 +7,15 @@
     <meta name="author" content="Daniel Schreyer" />
     <title>Daniel Schreyer | Bioinformatician</title>
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" crossorigin="anonymous"/>
+
+
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
         rel="stylesheet" type="text/css" />
-    <!-- Third party plugin CSS-->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        rel="stylesheet" /> -->
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <base target="_blank">
+    <script defer src="app.js"></script>
 </head>
 
 <body id="page-top">
@@ -50,7 +48,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 font-weight-light mb-5">Marie-Curie Fellow at the University of Glasgow investigating Pancreatic Cancer using Systems Biology</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#profile">Find Out More</a>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger enlarge-on-hover" href="#profile">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -63,10 +61,10 @@
             <div class="column-layout">
                 <div class="left-column text-justify">
                     <h2>About Me!</h2>
-                    <p>I graduated in January 2020 with a Master's of Science in Cell and Molecular Biology from the Friedrich-Alexander-Universität Erlangen-Nürnberg. In my Master's, I developed the love for programming and systems biology, thus I applied for PhD positions in the field of Computational Biology / Bioinformatics.</p>
-                    <p>In April I was fortunate to start my PhD with a Marie-Curie Fellowship (Horizon 2020) in the PRECODE project. PRECODE stands for PancREatic Cancer OrganoiDs rEsearch. In the project itself, Pancreatic Cancer Organoids will be used to tackle the challenges in Pancreatic Cancer and better the outcome of Pancreatic Cancer patients.</p>
-                    <p>
-                            My position in the project focuses on the Systems Biology analysis of the omics data generated from the established Patient-derived Pancreatic Cancer Organoids. Furthermore, I am invastigating the characteristics and 
+                    <p>I am a passionate Bioinformatician with interest in oncology and other fields of human diseases. I come from a Biology background and found my way into Bioinformatics through several courses undertaken in my Master's. From there on I saw my future in the computational aspects of Biology and not within a lab.</p>
+                    <p>My mostly biological education during my studies was followed by a Computational Biology PhD at the Beatson Cancer Institute of University of Glasgow UK. This PhD was funded by the European Union under the Marie-Curie Fellowship (Horizon 2020), which enabled me to go on multiple seminars, courses and internships.</p>
+                    <p>As the Bioinformatics world is vast and my passion for it is almost endless, I am constantly trying to increase my knowledge about programming languages, bioinformatic algorithms, or statistical models. There is always something wonderful to discover.
+
                     </p>
                 </div>
                 <div class="middle-column">
@@ -90,9 +88,10 @@
         <h2 class="text-center mt-0">Experiences</h2>
         <hr class="divider my-4" />
         <div class="container">
+        <div class="container hidden">
             <h3 class="mt-0 text-left">Educational</h3>
             <hr>
-            <div class="column-layout">
+            <div class="column-layout hidden">
                 <div class="column-details">
                     <h4>PhD in Computational/Systems Biology</h4>
                     <p>Researching extrachromosomal circular DNA in Pancreatic Cancer. Gained expertise in data curation, visualization, and molecular biology.</p>
@@ -105,24 +104,8 @@
                     <p>2020 - Present</p>
                 </div>
             </div>
-            <!-- <div class="column-layout">
-                <div class="column-details">
-                    <h5>SCPP: a single-cell RNA-seq processing pipeline</h5>
-                    <p>
-                        In my master's thesis, I worked on the construction of a pipeline to process single-cell RNA-seq data that allows the user to perform individual downstream analysis (<a href="https://github.com/DSchreyer/SCPP">GitHub Repository</a>). Additionally, I performed the downstream analysis on data which was generated by Johann Helmut Brandstätter's group (FAU). The aim of the project was to identify the molecular mechanisms underlying the phenotypic differences observed between two murine Bsn mutants.
-                        </p>
-                </div>
-                <div class="column-location-date">
-                    <h4>Master's Thesis</h4>
-                    <p>Friedrich-Alexander-Universität</p>
-                    <p>Department of Biology</p>
-                    <p>Group of Prof. Dr. Leila Taher</p>
-                    <p>2017 - 2019</p>
-                    <p>Grade: 1.1</p>
-                </div>
-            </div> -->
-            <hr class="dashed">
-            <div class="column-layout">
+            <hr class="dashed hidden">
+            <div class="column-layout hidden">
                 <div class="column-details">
                     <h4>M.Sc. Cell and Molecular Biology</h4>
                     <p>
@@ -137,8 +120,9 @@
                     <p>Grade: 1.2</p>
                 </div>
             </div>
-            <hr class="dashed">
-            <div class="column-layout">
+            <hr class="dashed hidden">
+            <div class="column-layout hidden">
+                <hr class="dashed">
                 <div class="column-details">
                     <h4>B.Sc. Biology</h4>
                     <p>
@@ -154,10 +138,10 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container hidden">
             <h3 class="mt-0 text-left">Practical</h3>
             <hr class="dark text-left">
-            <div class="column-layout">
+            <div class="column-layout hidden">
                 <div class="column-details">
                     <h5>Building a bispecific antibody against colorectal cancer</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ullam dicta tenetur, voluptate
@@ -171,7 +155,8 @@
                     <p>02/2019 - 11/2019</p>
                 </div>
             </div>
-            <div class="column-layout">
+            <hr class="dashed hidden">
+            <div class="column-layout hidden">
                 <div class="column-details">
                     <h5>Data visualization and management</h5>
                     <p>I created R scripts for data visualisation in a genotype imputation pipeline.</p>
@@ -184,7 +169,8 @@
                     <p class="">10/2018 - 12/2018</p>
                 </div>
             </div>
-            <div class="column-layout">
+            <hr class="dashed hidden">
+            <div class="column-layout hidden">
                 <div class="column-details">
                     <h5>Microscopic analysis of blood smears</h5>
                     <p></p>
@@ -511,38 +497,40 @@
                 <hr class="divider my-4" />
             </div>
         </div>
+
         <ul>
             <li>
-                <div class="warp">
-                    <img src="assets/img/portfolio/contact/Git_Logo.png" />
-                    <a href="https://github.com/DSchreyer/" target="_blank">www.github.com/DSchreyer</a>
+                <div class="warp contact contact-github">
+                    <i class="fa-brands fa-3x fa-fw fa-square-github text-dark"></i>
+                    <a href="https://github.com/DSchreyer/">www.github.com/DSchreyer</a>
+                </div>
+            </li>
+            <li>
+                <div class="warp contact contact-linkedin">
+                    <i class="fa-brands fa-3x fa-fw fa-linkedin text-dark"></i>
+                    <a href="https://linkedin.com/in/daniel-schreyer">www.linkedin.com/in/daniel-schreyer</a>
+                </div>
+            </li>
+            <li>
+                <div class="warp contact contact-mail">
+                    <i class="fa-solid fa-fw fa-3x fa-regular fa-envelope fa-spin text-dark"></i>
+                    <a href="mailto:ds.danielschreyer@gmail.com">ds.danielschreyer@gmail.com</a>
                 </div>
             </li>
             <li>
                 <div class="warp">
-                    <img src="assets/img/portfolio/contact/linkedin_Logo.png" />
-                    <a href="https://linkedin.com/in/daniel-schreyer "
-                        target="_blank">www.linkedin.com/in/daniel-schreyer</a>
-                </div>
-            </li>
-            <li>
-                <div class="warp">
-                    <img src="assets/img/portfolio/contact/Mail_Logo.png" />
-                    <a href="mailto:daniel-schreyer@web.de">daniel-schreyer@web.de</a>
-                </div>
-            </li>
-            <li>
-                <div class="warp">
-                    <img src="assets/img/portfolio/contact/Home_Logo.png" />
-                    <p>Glasgow, United Kingdom</p>
+                    <i class="fas fa-3x fa-fw fa-house text-dark"></i>
+                    <p>
+                        Erlangen (Germany) & Glasgow (United Kingdom)
+                    </p>
                 </div>
             </li>
         </ul>
     </section>
     <!-- Footer-->
-    <footer class="bg-light py-5">
+    <footer class="bg-dark py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Daniel Schreyer</div>
+            <div class="small text-center text-white">Copyright © 2023 - Daniel Schreyer</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
