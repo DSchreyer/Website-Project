@@ -33,6 +33,8 @@
   --light: #f8f9fa;
   --dark: #343a40;
   --c1: #2187e7;
+  --c2: #bd278b;
+  --c3: #93d214;
   --b2: #222;
   --b3: #333;
   --w1: #fff;
@@ -9398,15 +9400,15 @@ ul.skills {
 }
 
 ul.skills2 {
-  --c1: #9acd32;
+  --c1: var(--c3);
 }
 
 ul.skills3 {
-  --c1: #ff4500;
+  --c1: var(--c2);
 }
 
 ul.skills:before {
-  content: "Skills";
+  content: "Codes";
   text-transform: uppercase;
   position: absolute;
   top: -75px;
@@ -9417,11 +9419,11 @@ ul.skills:before {
   left: 0;
   padding: 15px 15px 0 0;
   text-align: end;
-  font-weight: 600;
+  font-weight: 700;
   z-index: 1;
   transition: var(--t1);
-  font-size: 50px;
-  line-height: 35px;
+  font-size: 40px;
+  line-height: 25px;
   transform: scaleY(1.65);
 }
 
@@ -9430,7 +9432,7 @@ ul.skills2:before {
 }
 
 ul.skills3:before {
-  content: "Codes";
+  content: "Bio Data";
 }
 
 ul.skills:after {
@@ -9449,7 +9451,7 @@ ul.skills:hover:before,
 label:hover + ul.skills:before,
 input:checked + label + ul.skills:before {
   transition: var(--t1);
-  background-color: #2187e7;
+  background-color: var(--c1);
   background-position: 0 50%;
 }
 ul.skills:hover:after,
@@ -9457,29 +9459,29 @@ label:hover + ul.skills:after,
 input:checked + label + ul.skills:after {
   top: -20px;
   transition: var(--t1);
-  border-top-color: #2187e7;
+  border-top-color: var(--c1);
 }
 
 ul.skills2:hover:before,
 label:hover + ul.skills2:before,
 input:checked + label + ul.skills2:before {
-  background-color: #9acd32;
+  background-color: var(--c3);
 }
 ul.skills2:hover:after,
 label:hover + ul.skills2:after,
 input:checked + label + ul.skills2:after {
-  border-top-color: #9acd32;
+  border-top-color: var(--c3);
 }
 
 ul.skills3:hover:before,
 label:hover + ul.skills3:before,
 input:checked + label + ul.skills3:before {
-  background-color: #ff4500;
+  background-color: var(--c2);
 }
 ul.skills3:hover:after,
 label:hover + ul.skills3:after,
 input:checked + label + ul.skills3:after {
-  border-top-color: #ff4500;
+  border-top-color: var(--c2);
 }
 
 ul.skills li {
@@ -9514,18 +9516,18 @@ ul.skills li:before {
 }
 
 ul.skills2 li:before {
-  --track: #9acd3240;
+  --track: var(--c3);
 }
 
 ul.skills3 li:before {
-  --track: #ff450040;
+  --track: var(--c2);
 }
 
 ul.skills li:after {
   content: "";
   height: 11px;
   margin: 0 0 2px 0;
-  background: #2187e7;
+  background: var(--c1);
   position: absolute;
   box-shadow: 0px 0px 10px 1px #00c6ff66;
   left: 3px;
@@ -9536,13 +9538,13 @@ ul.skills li:after {
 }
 
 ul.skills2 li:after {
-  background: #9acd32;
-  box-shadow: 0px 0px 10px 1px #9acd3299;
+  background: var(--c3);
+  box-shadow: 0px 0px 10px 1px var(--c3);
 }
 
 ul.skills3 li:after {
-  background: #ff4500;
-  box-shadow: 0px 0px 10px 1px #ff450099;
+  background: var(--c2);
+  box-shadow: 0px 0px 10px 1px var(--c2);
 }
 
 ul.skills li:hover {
@@ -9588,17 +9590,17 @@ ul.skills li:hover span:before,
   transition: var(--t1);
   right: calc(calc(calc(100 - var(--per)) * 1%) - 12px);
   opacity: 1;
-  border-right-color: #2187e7;
+  border-right-color: var(--c1);
 }
 
 ul.skills2 li:hover span:before,
 .profile-skills input:checked + label + ul.skills2 li span:before {
-  border-right-color: #9acd32;
+  border-right-color: var(--c3);
 }
 
 ul.skills3 li:hover span:before,
 .profile-skills input:checked + label + ul.skills3 li span:before {
-  border-right-color: #ff4500;
+  border-right-color: var(--c2);
 }
 
 ul.skills li span:after {
@@ -9627,16 +9629,91 @@ ul.skills li:hover span:after,
 }
 
 ul.skills2 li:hover span:after {
-  background: #9acd32;
+  background: var(--c3);
 }
 
 ul.skills3 li:hover span:after {
-  background: #ff4500;
+  background: var(--c2);
 }
 
 /*********************/
 /*** SKILLS VALUES ***/
 /*********************/
+
+ul.skills li.sk-r {
+  --per: 90;
+}
+
+ul.skills li.sk-python {
+  --per: 75;
+}
+
+ul.skills li.sk-nextflow {
+  --per: 70;
+}
+
+ul.skills li.sk-bash {
+  --per: 85;
+}
+
+ul.skills li.sk-perl {
+  --per: 25;
+}
+
+ul.skills li.sk-sql {
+  --per: 50;
+}
+
+ul.skills li.sk-html {
+  --per: 35;
+}
+
+ul.skills li.sk-css {
+  --per: 30;
+}
+
+ul.skills li.sk-genomics {
+  --per: 90;
+}
+
+ul.skills li.sk-transcriptomics {
+  --per: 85;
+}
+
+ul.skills li.sk-singlecell {
+  --per: 55;
+}
+
+ul.skills li.sk-epigenetics {
+  --per: 60;
+}
+
+ul.skills li.sk-metabolomics {
+  --per: 20;
+}
+
+ul.skills li.sk-shiny {
+  --per: 75;
+}
+
+ul.skills li.sk-machinelearning {
+  --per: 55;
+}
+
+ul.skills li.sk-containerisation {
+  --per: 70;
+}
+
+ul.skills li.sk-git {
+  --per: 85;
+}
+
+ul.skills li.sk-hpc {
+  --per: 80;
+}
+ul.skills li.sk-aws {
+  --per: 35;
+}
 
 ul.skills li.sk-ani {
   --per: 85;
@@ -9750,15 +9827,15 @@ ul.skills li.sk-pug {
 }
 
 .profile-skills input:checked + label:before {
-  border-color: #2187e7;
+  border-color: var(--c1);
 }
 
 .profile-skills input#sk2:checked + label:before {
-  border-color: #9acd32;
+  border-color: var(--c3);
 }
 
 .profile-skills input#sk3:checked + label:before {
-  border-color: #ff4500;
+  border-color: var(--c2);
 }
 
 label[for="sk1"] {
@@ -9935,13 +10012,13 @@ ul.skills li.more input:checked + label:hover {
     transition: var(--t1);
     right: calc(calc(96.5 - var(--per)) * 1%);
     opacity: 1;
-    border-right-color: #2187e7;
+    border-right-color: var(--c1);
   }
   ul.skills2 li span:before {
-    border-right-color: #9acd32;
+    border-right-color: var(--c3);
   }
   ul.skills3 li span:before {
-    border-right-color: #ff4500;
+    border-right-color: var(--c2);
   }
   ul.skills li span:after {
     transition: var(--t1);
