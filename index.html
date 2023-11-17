@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profile">Profile</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiences">Experiences</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                 </ul>
@@ -40,8 +40,8 @@
     </nav>
     <!-- Masthead-->
     <header class="masthead" id="home">
-        <div class="container h-100">
-            <div class="column-layout justify-content-center align-items-center text-center mt-0">
+        <div class="container h-100 flex-container">
+            <div class="column-layout justify-content-center align-items-center text-center mt-0 flex-container">
                 <div class="left-column text-center">
                     <h1 class="text-uppercase text-white font-weight-bold">Daniel Schreyer</h1>
                     <hr class="divider my-4" />
@@ -215,214 +215,65 @@
             </div>
         </div>
     </section>
-    <section class="page-section bg-dark text-white" id="courses">
+    <section class="page-section bg-dark text-white" id="skills">
         <div class="container">
-            <h2 class="mt-0 text-center">Programming Experience</h2>
-            <!-- <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a> -->
-            <hr class="divider my-4" />
-            <div class="container">
-                <div class="accordion" id="accordionButtons">
-                    <h3>Languages</h3>
-            <hr class="light text-left">
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Bash
-                                </button>
-                            </h5>
+                <div class="profile-skills margin-fit-skills">
+                  <div>
+                    <input type="checkbox" id="sk1" />
+                    <label for="sk1"></label>
+                    <ul class="skills skills1">
+                      <li class="sk-cms"><span>CMS</span></li>
+                      <li class="sk-dtb"><span>DDBB</span></li>
+                      <li class="sk-dis"><span>Design</span></li>
+                      <li class="sk-pro"><span>Programing</span></li>
+                      <li class="sk-ani"><span>Animation</span></li>
+                      <li class="more">
+                        <input type="checkbox" id="more-con" /><label for="more-con"></label>
+                        <div>
+                          <span>PHOTO</span><span>API</span><span>MAPS</span><span>VIDEO</span
+                          ><span>CHARTS</span><span>RWD</span>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <h5>General Use</h5>
-                                <p>I use Bash almost every day since my work computer is set-up with Linux. I am highly comfortable in the Bash environment and executed lots of systems biology softwares in the last few years.</p>
-                                <h5>Pipeline for scRNA-seq processing</h5>
-                                <p>During my master's thesis I built a pipeline written in Bash that uses standard scRNA-seq processing tools like STAR, CellRanger, FastQC and more, to process the data to a format which is easily usable by scientists for downstream analysis.</p>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/FourStars.png" alt="Four Stars" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="sk2" />
+                    <label for="sk2"></label>
+                    <ul class="skills skills2">
+                      <li class="sk-gim"><span>Gimp</span></li>
+                      <li class="sk-ado"><span>Adobe&nbsp;CC</span></li>
+                      <li class="sk-not"><span>Notepad++</span></li>
+                      <li class="sk-tri"><span>Tridion</span></li>
+                      <li class="sk-wor"><span>Wordpress</span></li>
+                      <li class="more">
+                        <input type="checkbox" id="more-pro" /><label for="more-pro"></label>
+                        <div>
+                          <span>JOOMLA</span><span>DRUPAL</span><span>JIRA</span
+                          ><span>TRELLO</span><span>FILEZILLA</span><span>GIT</span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSeven">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    R
-                                </button>
-                            </h5>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="sk3" />
+                    <label for="sk3"></label>
+                    <ul class="skills skills3">
+                      <li class="sk-css"><span>CSS</span></li>
+                      <li class="sk-htm"><span>HTML</span></li>
+                      <li class="sk-jav"><span>JS</span></li>
+                      <li class="sk-php"><span>PHP</span></li>
+                      <li class="sk-sql"><span>SQL</span></li>
+                      <li class="more">
+                        <input type="checkbox" id="more-len" /><label for="more-len"></label>
+                        <div>
+                          <span>XHTML</span><span>XSL</span><span>XML</span><span>JSON</span
+                          ><span>PUG</span><span>SASS</span>
                         </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <h5>General Use</h5>
-                                <p></p>
-                                <h5>Analyses blablabla</h5>
-                                <p></p>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/FiveStars.png" alt="Four Stars" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Python
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <h5>Python Bootcamp: Udemy Online Course</h5>
-                                <p>To get started with the Python Programming Language, I bought an online course on Udemy and worked my way through 30 hours of video material. This video series introduced me into the fundamentals of Python programming with concrete applications.</p>
-                                <h5>Python based Software Carpentry Workshop</h5>
-                                <p>During my time in Cape Town, the Computational Biology department held a 2-day Python Software Carpentry workshop in which I participated.</p>
-                                <h5>Deep Learning: Udemy Online Course</h5>
-                                <p>Another online course taught me the basics of Deep Learning using Python.</p>
-                                <h5>Reddit Wallpaper Scraper</h5>
-                                <p style="margin-bottom: 0rem;">To get comfortable in the Python environment, I wrote two different scripts. The first one is a web scraper that downloads the newst wallpapers on a given subreddit. The second Python script randomly selects an image from a given directory path and puts it as your wallpaper (tested with Debian and Ubuntu).
-                                </p>
-                                <a href="https://github.com/DSchreyer/random-wallpaper">GitHub Repository</a>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/ThreeStars.png" alt="Three Stars" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Nextflow
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <h5>Nf-core Pipeline for the identification of extrachromosomal circular DNA</h5>
-                                <p>Automated the individual steps of the identification of extrachromosomal circular DNA. This includes quality control, trimming, mapping and circular DNA identification. Version 1.0.0 was published in the beginning of June.
-                                    <br>
-                                    <a href="https://github.com/nf-core/circdna">GitHub Repository</a>
-                                    <br>
-                                    <a href="https://nf-co.re/circdna">Nf-core/circdna webpage</a>
-                                    </p>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/FourStars.png" alt="Four Stars" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingEight">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    HTML & CSS
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <p></p>
-                                <h5>Website</h5>
-                                <p>I wrote this website using HTML and CSS. Of course, I did not write it entirely by myself, but used Bootstrap as a starting point and worked myself through it.</p>
-                                <p class="font-italic">Don't reinvent the wheel :)</p>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/TwoStars.png" alt="Two Stars" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Perl
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionButtons">
-                            <div class="card-body text-black-50">
-                                <h5>Perl Programming for Biology</h5>
-                                <p>This class taught by Prof. Leila Taher at the Friedrich-Alexander-Universität Erlangen-Nürnberg introduced me to the world of informatics in the world of Biology. After that I knew that I want to continue working in this wonderful field.</p>
-                                <p>Grade: 1.7</p>
-                                <hr>
-                                <p style="margin-bottom: 0;" class="font-weight-bold">Level:</p>
-                                <p class="font-weight-bold">
-                                    <img src="img/OneStar.png" alt="One Star" width=25% height=25% style="float: left">
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               <!--  <h3>Bioinformatics</h3>
-                <hr class="light">
-                <div class="accordion" id="accordionButtons2">
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                    R
-                                </button>
-                            </h5>
-                        </div>
-
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                            data-parent="#accordionButtons2">
-                            <div class="card-body text-black-50">
-                            <h5>Sequence Analysis and Statistical Genomics</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nostrum.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Perl
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                            data-parent="#accordionButtons2">
-                            <div class="card-body text-black-50">
-                                <h5>Bio-Perl</h5>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
+              </div>
     </section>
     <!-- Projects section-->
     <section class="page-section" id="projects">
