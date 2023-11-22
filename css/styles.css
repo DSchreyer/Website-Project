@@ -31,10 +31,12 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
+  --light2: #e5e5e5;
   --dark: #343a40;
-  --c1: #2187e7;
-  --c2: #bd278b;
-  --c3: #93d214;
+  --c0: #f38566;
+  --c1: #f47b59;
+  --c2: #f4714d;
+  --c3: #f56740;
   --b2: #222;
   --b3: #333;
   --w1: #fff;
@@ -9197,6 +9199,23 @@ section#contact li {
   flex: 1;
 }
 
+section#profile h5 {
+  color: var(--light);
+}
+section#profile h4 {
+  color: var(--light);
+}
+section#profile h3 {
+  color: var(--light);
+}
+section#profile p {
+  color: var(--light2);
+  margin: 5px;
+  padding-bottom: 10px;
+}
+section#experiences h2 {
+  color: var(--primary);
+}
 section#profile img {
   margin-left: auto;
   margin-right: auto;
@@ -9221,14 +9240,32 @@ section#experiences .column-details {
 }
 
 section#experiences h5 {
-  color: #f4623a;
+  color: var(--light);
 }
 section#experiences h4 {
-  color: #f4623a;
+  color: var(--light);
+}
+section#experiences h3 {
+  color: var(--primary);
 }
 section#experiences p {
-  color: #343a40;
+  color: var(--light2);
   margin: 5px;
+}
+section#experiences h2 {
+  color: var(--primary);
+}
+section#experiences hr.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: var(--light);
+}
+
+section#experiences hr {
+  border-color: var(--light2);
+}
+section#experiences hr.dashed {
+  border-color: var(--light2);
 }
 
 @media (min-width: 1024px) {
@@ -9380,7 +9417,7 @@ body {
   align-items: flex-start;
 }
 
-.profile-skills > div {
+a.project -box.profile-skills > div {
   width: 32%;
   margin-right: 3%;
   border-radius: 2px;
@@ -9394,17 +9431,17 @@ ul.skills {
   background: linear-gradient(
     0deg,
     var(--c1) 0 10px,
-    var(--b2) 0 calc(100% - 10px),
+    var(--dark) 0 calc(100% - 10px),
     var(--c1) 0 100%
   );
 }
 
 ul.skills2 {
-  --c1: var(--c3);
+  --c1: var(--c2);
 }
 
 ul.skills3 {
-  --c1: var(--c2);
+  --c1: var(--c3);
 }
 
 ul.skills:before {
@@ -9413,8 +9450,8 @@ ul.skills:before {
   position: absolute;
   top: -75px;
   height: 50px;
-  color: var(--w1);
-  background-color: var(--b2);
+  color: var(--light);
+  background-color: var(--dark);
   width: 100%;
   left: 0;
   padding: 15px 15px 0 0;
@@ -9439,12 +9476,12 @@ ul.skills:after {
   content: "";
   position: absolute;
   border: 40px solid #fff0;
-  border-top-color: var(--b2);
+  border-top-color: var(--dark);
   top: -30px;
   left: 10px;
   z-index: 0;
   transition: var(--t1);
-  filter: drop-shadow(0 11px 0.1px var(--w1));
+  filter: drop-shadow(0 11px 0.1px var(--light));
 }
 
 ul.skills:hover:before,
@@ -9465,23 +9502,23 @@ input:checked + label + ul.skills:after {
 ul.skills2:hover:before,
 label:hover + ul.skills2:before,
 input:checked + label + ul.skills2:before {
-  background-color: var(--c3);
+  background-color: var(--c2);
 }
 ul.skills2:hover:after,
 label:hover + ul.skills2:after,
 input:checked + label + ul.skills2:after {
-  border-top-color: var(--c3);
+  border-top-color: var(--c2);
 }
 
 ul.skills3:hover:before,
 label:hover + ul.skills3:before,
 input:checked + label + ul.skills3:before {
-  background-color: var(--c2);
+  background-color: var(--c3);
 }
 ul.skills3:hover:after,
 label:hover + ul.skills3:after,
 input:checked + label + ul.skills3:after {
-  border-top-color: var(--c2);
+  border-top-color: var(--c3);
 }
 
 ul.skills li {
@@ -9507,7 +9544,7 @@ ul.skills li:before {
   border-radius: 2px;
   border: 1px solid #111;
   border-color: #111 #323232 #323232 #111;
-  --track: #2292dd40;
+  --track: var(--c0);
   background: linear-gradient(
     90deg,
     var(--track) calc(calc(var(--per) * 1%) + 4px),
@@ -9516,11 +9553,11 @@ ul.skills li:before {
 }
 
 ul.skills2 li:before {
-  --track: var(--c3);
+  --track: var(--c1);
 }
 
 ul.skills3 li:before {
-  --track: var(--c2);
+  --track: var(--c3);
 }
 
 ul.skills li:after {
@@ -9538,13 +9575,13 @@ ul.skills li:after {
 }
 
 ul.skills2 li:after {
-  background: var(--c3);
-  box-shadow: 0px 0px 10px 1px var(--c3);
+  background: var(--c2);
+  box-shadow: 0px 0px 10px 1px var(--c2);
 }
 
 ul.skills3 li:after {
-  background: var(--c2);
-  box-shadow: 0px 0px 10px 1px var(--c2);
+  background: var(--c3);
+  box-shadow: 0px 0px 10px 1px var(--c3);
 }
 
 ul.skills li:hover {
@@ -9595,12 +9632,12 @@ ul.skills li:hover span:before,
 
 ul.skills2 li:hover span:before,
 .profile-skills input:checked + label + ul.skills2 li span:before {
-  border-right-color: var(--c3);
+  border-right-color: var(--c2);
 }
 
 ul.skills3 li:hover span:before,
 .profile-skills input:checked + label + ul.skills3 li span:before {
-  border-right-color: var(--c2);
+  border-right-color: var(--c3);
 }
 
 ul.skills li span:after {
@@ -9611,7 +9648,7 @@ ul.skills li span:after {
   counter-reset: percent var(--per);
   /*content: counter(percent) "%";*/
   content: counter(percent);
-  color: var(--b2);
+  color: var(--dark);
   opacity: 1 !important;
   padding: 4px 6px;
   border-radius: 1px;
@@ -9629,11 +9666,11 @@ ul.skills li:hover span:after,
 }
 
 ul.skills2 li:hover span:after {
-  background: var(--c3);
+  background: var(--c2);
 }
 
 ul.skills3 li:hover span:after {
-  background: var(--c2);
+  background: var(--c3);
 }
 
 /*********************/
@@ -9781,7 +9818,7 @@ ul.skills li.sk-pug {
 }
 
 .profile-skills label {
-  background: var(--w1);
+  background: var(--light);
   position: absolute;
   top: -61px;
   left: 22px;
@@ -9791,7 +9828,7 @@ ul.skills li.sk-pug {
   border-radius: 100%;
   cursor: pointer;
   transition: var(--t1);
-  box-shadow: 0 0 0 0 var(--w1);
+  box-shadow: 0 0 0 0 var(--light);
 }
 
 .profile-skills label:before {
@@ -9801,7 +9838,7 @@ ul.skills li.sk-pug {
   top: 12px;
   left: 11px;
   z-index: 2;
-  border: 9px solid var(--b2);
+  border: 9px solid var(--dark);
   border-top-width: 0;
   border-right-width: 0;
   transform: rotate(-45deg);
@@ -9812,17 +9849,17 @@ ul.skills li.sk-pug {
 }
 
 .profile-skills label:hover {
-  box-shadow: 0 0 0 3px var(--w1);
+  box-shadow: 0 0 0 3px var(--light);
   transition: var(--t1);
 }
 
 .profile-skills label:hover:before {
-  border-color: var(--b2);
+  border-color: var(--dark);
   transition: var(--t1);
 }
 
 .profile-skills input:checked + label {
-  box-shadow: 0 0 0 6px var(--w1);
+  box-shadow: 0 0 0 6px var(--light);
   transition: var(--t1);
 }
 
@@ -9831,11 +9868,11 @@ ul.skills li.sk-pug {
 }
 
 .profile-skills input#sk2:checked + label:before {
-  border-color: var(--c3);
+  border-color: var(--c2);
 }
 
 .profile-skills input#sk3:checked + label:before {
-  border-color: var(--c2);
+  border-color: var(--c3);
 }
 
 label[for="sk1"] {
@@ -9846,13 +9883,13 @@ label[for="sk2"] {
 }
 
 label[for="sk1"]:before {
-  border-color: cornflowerblue;
+  border-color: var(--c1);
 }
 label[for="sk2"]:before {
-  border-color: yellowgreen;
+  border-color: var(--c2);
 }
 label[for="sk3"]:before {
-  border-color: orangered;
+  border-color: var(--c3);
 }
 
 /*********************/
@@ -9892,12 +9929,12 @@ ul.skills li.more div span:after {
 }
 
 ul.skills li.more label {
-  background: linear-gradient(163deg, var(--b2) 50%, var(--w1) 50%);
+  background: linear-gradient(163deg, var(--dark) 50%, var(--light) 50%);
   right: 0;
   left: inherit;
   top: inherit;
   bottom: -70px;
-  color: var(--b2);
+  color: var(--dark);
   background-size: 100% 300%;
   background-position-y: 100%;
   transition: var(--t1);
@@ -9923,9 +9960,9 @@ ul.skills li.more label:before {
 
 ul.skills li.more label:hover {
   background-position-y: 0%;
-  color: var(--w1) !important;
+  color: var(--light) !important;
   transition: var(--t1);
-  box-shadow: 0 0 0 10px var(--w1);
+  box-shadow: 0 0 0 10px var(--light);
 }
 
 ul.skills li.more span {
@@ -9946,7 +9983,7 @@ ul.skills li.more span:hover {
 }
 
 ul.skills li.more input:checked + label {
-  box-shadow: 0 0 0 9px var(--w1);
+  box-shadow: 0 0 0 9px var(--light);
   background-position-y: 0%;
   color: var(--w0);
   bottom: -70px;
@@ -9959,9 +9996,9 @@ ul.skills li.more input:checked + label:before {
 }
 
 ul.skills li.more input:checked + label:hover {
-  box-shadow: 0 0 0 0 var(--w1);
+  box-shadow: 0 0 0 0 var(--light);
   background-position-y: 100%;
-  color: var(--b2) !important;
+  color: var(--dark) !important;
 }
 
 /*********************/
@@ -10015,10 +10052,10 @@ ul.skills li.more input:checked + label:hover {
     border-right-color: var(--c1);
   }
   ul.skills2 li span:before {
-    border-right-color: var(--c3);
+    border-right-color: var(--c2);
   }
   ul.skills3 li span:before {
-    border-right-color: var(--c2);
+    border-right-color: var(--c3);
   }
   ul.skills li span:after {
     transition: var(--t1);
@@ -10031,4 +10068,8 @@ ul.skills li.more input:checked + label:hover {
 .margin-fit-skills {
   margin-top: 5%;
   margin-bottom: -3%;
+}
+
+img.img-fluid:hover {
+  transform: scale(1.2);
 }
