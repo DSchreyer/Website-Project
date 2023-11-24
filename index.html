@@ -62,12 +62,12 @@
               <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#experiences"
                 >Experiences</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects"
@@ -156,7 +156,11 @@
       </div>
     </section>
     <!-- Experiences section-->
-    <section class="page-section bg-light text-white" id="skills">
+    <section class="page-section-skills bg-light text-white" id="skills">
+      <h2 class="text-center mt-0 text-dark">Skills</h2>
+      <hr class="divider" />
+      <br />
+      <br />
       <div class="container">
         <div class="profile-skills margin-fit-skills">
           <div>
@@ -288,7 +292,7 @@
           <hr class="dark text-left" />
           <div class="column-layout hidden">
             <div class="column-details">
-              <h5>Building a bispecific antibody against colorectal cancer</h5>
+              <h4>Building a bispecific antibody against colorectal cancer</h5>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Quisquam ullam dicta tenetur, voluptate minus perferendis est
@@ -297,7 +301,7 @@
               </p>
             </div>
             <div class="column-location-date">
-              <h4>Participant</h4>
+              <h5>Participant</h4>
               <p>iGEM competition</p>
               <p>02/2019 - 11/2019</p>
             </div>
@@ -305,14 +309,14 @@
           <hr class="dashed hidden" />
           <div class="column-layout hidden">
             <div class="column-details">
-              <h5>Data visualization and management</h5>
+              <h4>Data visualization and management</h5>
               <p>
                 I created R scripts for data visualisation in a genotype
                 imputation pipeline.
               </p>
             </div>
             <div class="column-location-date">
-              <h4>Research Intern</h4>
+              <h5>Research Intern</h4>
               <p>Group of Prof. Nicola Mulder</p>
               <p>Computational Biology Division</p>
               <p>University of Cape Town, South Africa</p>
@@ -322,11 +326,11 @@
           <hr class="dashed hidden" />
           <div class="column-layout hidden">
             <div class="column-details">
-              <h5>Microscopic analysis of blood smears</h5>
+              <h4>Microscopic analysis of blood smears</h5>
               <p></p>
             </div>
             <div class="column-location-date">
-              <h4>Working Student</h4>
+              <h5>Working Student</h4>
               <p>Siemens Healthineers</p>
               <p>Erlangen, Germany</p>
               <p class="">01/2018 - 09/2018</p>
@@ -375,15 +379,24 @@
     </section>
     <!-- Projects section-->
     <section class="page-section bg-light" id="projects">
+      <h2 class="text-center mt-0">Projects</h2>
+      <hr class="divider" />
+      <br />
+      <br />
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          <div class="col-lg-4 col-sm-6 project-column">
-            <a class="projects-box" href="https://github.com/nf-core/circdna"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/nf-core_logo.png"
-                alt=""
-              />
+          <div class="project-column">
+            <a
+              class="centered-content"
+              href="https://github.com/nf-core/circdna"
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="assets/img/portfolio/projects/nf-core_logo.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">nf-core/circdna</h3>
             </a>
             <p class="text-muted mb-0">
@@ -392,15 +405,18 @@
               data.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6 project-column">
+          <div class="project-column">
             <a
-              class="projects-box"
+              class="centered-content"
               href="https://dschreyer.shinyapps.io/pdac_gene_info"
-              ><img
-                class="img-fluid"
-                src="/assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.png"
-                alt=""
-              />
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="/assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">Pancreatic Cancer Gene Analysis</h3>
             </a>
             <p class="text-muted mb-0">
@@ -409,15 +425,18 @@
               and integration with related information and clinical data.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6 project-column">
+          <div class="project-column">
             <a
-              class="projects-box"
+              class="centered-content"
               href="https://github.com/DSchreyer/random-wallpaper"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/webcrawler.png"
-                alt=""
-              />
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="assets/img/portfolio/projects/webcrawler.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">Reddit Wallpaper Scraper</h3>
             </a>
             <p class="text-muted mb-0">
@@ -425,13 +444,18 @@
               directory. Optimal for downloading wallpapers.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6 project-column">
-            <a class="projects-box" href="https://github.com/DSchreyer/SCPP"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/SCPP_logo.png"
-                alt=""
-              />
+          <div class="project-column">
+            <a
+              class="centered-content"
+              href="https://github.com/DSchreyer/SCPP"
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle-90"
+                  src="assets/img/portfolio/projects/SCPP_logo.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">A scRNA-seq Processing Pipeline</h3>
             </a>
             <p class="text-muted mb-0">
@@ -439,15 +463,18 @@
               usable output for downstream analysis.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6 project-column">
+          <div class="project-column">
             <a
-              class="projects-box"
+              class="centered-content"
               href="https://www.researchgate.net/profile/Daniel-Schreyer/research"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/science_book.png"
-                alt=""
-              />
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="assets/img/portfolio/projects/science_book.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">Data analysis for Science</h3>
             </a>
             <p class="text-muted mb-0">
@@ -455,15 +482,18 @@
               scientific hypothesis.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="project-column">
             <a
-              class="projects-box"
+              class="centered-content"
               href="assets/img/portfolio/projects/ai_logo.png"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/ai_logo.png"
-                alt=""
-              />
+            >
+              <div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="assets/img/portfolio/projects/ai_logo.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">Deep Learning Projects</h3>
             </a>
             <p class="text-muted mb-0">
@@ -471,16 +501,17 @@
               classify images or to write novel text.
             </p>
           </div>
-          <div class="col-lg-4 col-sm-6"></div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="project-column">
             <a
-              class="projects-box"
+              class="centered-content"
               href="https://github.com/DSchreyer/Website-Project"
-              ><img
-                class="img-fluid"
-                src="assets/img/portfolio/projects/website_project.png"
-                alt=""
-              />
+              ><div class="projects-box">
+                <img
+                  class="img-circle"
+                  src="assets/img/portfolio/projects/website_project.png"
+                  alt=""
+                />
+              </div>
               <h3 class="h4 mb-2">My Website</h3>
             </a>
             <p class="text-muted mb-0">

@@ -420,10 +420,45 @@ small,
   font-weight: 400;
 }
 
-.img-fluid {
-  max-width: 50%;
+.projects-box {
+  border-radius: 50%; /* Makes the div circular */
+  border: 3px solid var(--dark); /* Adjust the thickness and color of the border */
+  background-color: white;
+  width: 300px; /* Set the width of the circle */
+  height: 300px; /* Set the height of the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Makes the div circular */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Adds shadow - adjust as needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, margin 0.3s ease; /* Smooth transition for hover effect */
+  overflow: hidden; /* Ensures the image stays within the circle */
+}
+
+.projects-box:hover {
+  transform: scale(1.1); /* Increase the size of the entire circle on hover */
+  margin-bottom: 20px; /* Increased margin to accommodate larger image */
+  margin-top: 20px; /* Increased margin to accommodate larger image */
+  box-shadow: 0px 0px 20px 0px var(--dark); /* Adds shadow - adjust as needed */
+}
+.centered-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center the text for the heading */
+}
+
+.img-circle {
+  max-width: 75%;
+  max-height: 75%;
   height: auto;
-  border-radius: 50%;
+}
+
+.img-circle-90 {
+  max-width: 90%;
+  max-height: 90%;
+  height: auto;
 }
 
 .container {
@@ -437,20 +472,96 @@ small,
   .container {
     max-width: 540px;
   }
+  .projects-box {
+    width: 250px; /* Smaller size for smaller screens */
+    height: 250px; /* Smaller size for smaller screens */
+  }
+
+  .projects-box:hover {
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 20px 0px var(--dark); /* Adjusted shadow for smaller screens */
+  }
+  .project-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .projects-box {
+    width: 250px; /* Smaller size for smaller screens */
+    height: 250px; /* Smaller size for smaller screens */
+  }
+
+  .projects-box:hover {
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 20px 0px var(--dark); /* Adjusted shadow for smaller screens */
+  }
+  .project-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    justify-content: center;
+    max-width: none; /* Remove max-width restriction */
+    margin-left: auto; /* Auto margin for horizontal centering */
+    margin-right: auto; /* Auto margin for horizontal centering */
   }
 }
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
+  .projects-box {
+    width: 200px; /* Smaller size for smaller screens */
+    height: 200px; /* Smaller size for smaller screens */
+  }
+
+  .projects-box:hover {
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 20px 0px var(--dark); /* Adjusted shadow for smaller screens */
+  }
+  .project-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    justify-content: center;
+    max-width: none; /* Remove max-width restriction */
+    margin-left: auto; /* Auto margin for horizontal centering */
+    margin-right: auto; /* Auto margin for horizontal centering */
+  }
+  .single-project {
+    justify-content: center; /* Center the child horizontally in the row */
+  }
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .projects-box {
+    width: 250px; /* Smaller size for smaller screens */
+    height: 250px; /* Smaller size for smaller screens */
+  }
+
+  .projects-box:hover {
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 20px 0px var(--dark); /* Adjusted shadow for smaller screens */
+  }
+}
+
+@media (min-width: 1400px) {
+  .projects-box {
+    width: 300px; /* Smaller size for smaller screens */
+    height: 300px; /* Smaller size for smaller screens */
+  }
+
+  .projects-box:hover {
+    margin-bottom: 25px; /* Adjusted margin for smaller screens */
+    margin-top: 25px; /* Adjusted margin for smaller screens */
+    box-shadow: 0px 0px 25px 0px var(--dark); /* Adjusted shadow for smaller screens */
   }
 }
 
@@ -8929,6 +9040,10 @@ hr.light {
   padding: 8rem 0;
 }
 
+.page-section-skills {
+  padding: 3rem 0 7rem 0;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -9213,9 +9328,6 @@ section#profile p {
   margin: 5px;
   padding-bottom: 10px;
 }
-section#experiences h2 {
-  color: var(--primary);
-}
 section#profile img {
   margin-left: auto;
   margin-right: auto;
@@ -9243,7 +9355,7 @@ section#experiences h5 {
   color: var(--light);
 }
 section#experiences h4 {
-  color: var(--light);
+  color: var(--primary);
 }
 section#experiences h3 {
   color: var(--primary);
@@ -9253,12 +9365,12 @@ section#experiences p {
   margin: 5px;
 }
 section#experiences h2 {
-  color: var(--primary);
+  color: var(--light);
 }
 section#experiences hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: var(--light);
+  border-color: var(--primary);
 }
 
 section#experiences hr {
@@ -9302,13 +9414,6 @@ section#experiences hr.dashed {
   margin-bottom: 50px;
 }
 
-#projects {
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: center;
-  justify-content: center;
-}
-
 .project-column {
   padding-bottom: 25px;
 }
@@ -9346,12 +9451,6 @@ section#experiences hr.dashed {
   transition: all 0.5s;
 }
 
-/* @media(prefers-reduced-motion) {
-    .hidden {
-      transition: none;
-    }
-} */
-
 .showing {
   opacity: 1;
   filter: blur(0);
@@ -9372,27 +9471,6 @@ section#experiences hr.dashed {
 /* Skill Bar */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
-/* :root {
-	--c1: #2187e7;
-	--b2: #222;
-	--b3: #333;
-	--w1: #fff;
-	--w2: #eee;
-	--t1: all 0.5s ease 0s;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: "Roboto", sans-serif;
-	font-size: 15px;
-} */
 
 * {
   box-sizing: border-box;
@@ -10072,4 +10150,12 @@ ul.skills li.more input:checked + label:hover {
 
 img.img-fluid:hover {
   transform: scale(1.2);
+  color: black;
+}
+
+.profile-skills > div {
+  width: 32%;
+  margin-right: 3%;
+  border-radius: 2px;
+  position: relative;
 }
