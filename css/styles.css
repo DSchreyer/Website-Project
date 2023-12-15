@@ -2950,9 +2950,11 @@ input[type="button"].btn-block {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  text-align: left;
   justify-content: space-between;
 }
 .navbar-brand {
+  text-align: left;
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -10360,8 +10362,9 @@ section#projects h3 {
   border: none;
   border-bottom: 1px solid #666;
   color: #ddd;
-  text-transform: uppercase;
   outline: none;
+  resize: none;
+  overflow-y: hidden; /* Hides the vertical scrollbar */
   transition: border-color 0.2s;
 }
 
@@ -10392,6 +10395,26 @@ section#projects h3 {
   width: 20px;
   height: 20px;
   margin: 0 5px;
+}
+
+.form-required-notice {
+  color: white; /* Ensures the text is white */
+  font-size: 0.8rem; /* Adjust the size as needed */
+  text-align: left; /* Aligns the text to the left */
+  opacity: 0.8; /* Adjust opacity for better readability */
+  position: absolute;
+  bottom: -5px;
+  left: 10px;
+}
+
+.input-error {
+  border-color: red; /* Highlight in red when there's an error */
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: none; /* Hidden by default */
 }
 
 @media screen and (max-width: 520px) {
