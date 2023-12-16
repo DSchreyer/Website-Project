@@ -9445,6 +9445,13 @@ section#experiences hr.dashed {
   /* Other styles like font-size, etc. */
 }
 
+.contact i {
+  /* Add your desired hover styles here */
+  color: #343a40 !important;
+  transition: color 0.5s ease; /* Transition effect */
+  /* Other styles like font-size, etc. */
+}
+
 .contact:hover i,
 .contact:hover a {
   /* Add your desired hover styles here */
