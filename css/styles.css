@@ -10467,3 +10467,11 @@ section#projects h3 {
   resize: vertical; /* Allows the user to resize the textarea vertically */
   overflow: auto; /* Ensures the content scrolls if it gets too long */
 }
+
+section#impressum h1 {
+  color: var(--primary);
+}
+
+section#datenschutz h1 {
+  color: var(--primary);
+}
