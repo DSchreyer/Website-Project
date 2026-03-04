@@ -124,7 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const langBtn = document.getElementById("langToggle");
+  const langEn = document.getElementById("langEn");
+  const langDe = document.getElementById("langDe");
+
   const applyLang = (lang) => {
     const dict = translations[lang] || translations.en;
     document.documentElement.lang = lang;
@@ -132,16 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = el.dataset.i18n;
       if (dict[key]) el.textContent = dict[key];
     });
-    if (langBtn) langBtn.textContent = lang === "en" ? "DE" : "EN";
+    if (langEn && langDe) {
+      langEn.classList.toggle("active", lang === "en");
+      langDe.classList.toggle("active", lang === "de");
+    }
     localStorage.setItem("siteLang", lang);
   };
 
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      const current = localStorage.getItem("siteLang") || "en";
-      applyLang(current === "en" ? "de" : "en");
-    });
-  }
+  if (langEn) langEn.addEventListener("click", () => applyLang("en"));
+  if (langDe) langDe.addEventListener("click", () => applyLang("de"));
 
   applyLang(localStorage.getItem("siteLang") || "en");
 
