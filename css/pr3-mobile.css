@@ -1,0 +1,43 @@
+/* PR3: mobile and performance polish */
+
+/* Keep long brand text readable on small screens */
+@media (max-width: 991.98px) {
+  #mainNav .navbar-brand {
+    font-size: 0.95rem;
+    white-space: normal;
+    max-width: 80%;
+    line-height: 1.2;
+  }
+
+  .btn.btn-xl {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0.5rem auto;
+    display: block;
+  }
+
+  header.masthead {
+    min-height: 100svh;
+    padding-bottom: 2rem;
+  }
+
+  .screen-body-item {
+    padding: 24px;
+  }
+}
+
+/* Respect reduced-motion users and cut animation cost */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .enlarge-on-hover,
+  .projects-box,
+  .hidden,
+  .showing {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
