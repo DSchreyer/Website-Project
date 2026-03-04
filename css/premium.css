@@ -19,6 +19,9 @@ body {
   letter-spacing: 0.01em;
 }
 
+a { color: #9cc3ff; }
+a:hover { color: #c6dcff; }
+
 .container { width: min(1120px, 92%); margin: 0 auto; }
 .section { padding: 5rem 0; }
 
