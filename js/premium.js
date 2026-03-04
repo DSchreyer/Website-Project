@@ -9,6 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && reveals.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('in-view'));
+  }
+
   const form = document.getElementById("contactForm");
   if (!form) return;
 
