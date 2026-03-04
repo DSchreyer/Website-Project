@@ -76,9 +76,10 @@ function autoExpand(element) {
 
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("contactForm");
+  if (!form) return;
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     // Validate Name
     var name = form.querySelector('input[name="userName"]');
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // If all validations pass
-    // form.submit(); or other actions
+    // If all validations pass, submit to FormSubmit
+    form.submit();
   });
 });
