@@ -33,13 +33,14 @@
         <a class="brand" href="#home">Daniel Schreyer</a>
         <button class="menu-btn" aria-label="Toggle navigation">☰</button>
         <nav class="nav" id="nav">
-          <a href="#about">About</a>
-          <a href="#focus">Focus</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#focus" data-i18n="nav.focus">Focus</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#publications" data-i18n="nav.publications">Publications</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
+        <button class="lang-btn" id="langToggle" type="button">DE</button>
       </div>
     </header>
 
@@ -47,23 +48,23 @@
       <section class="hero" id="home">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">Data Science · Oncology · Pharma</p>
-            <h1>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Data Science · Oncology · Pharma</p>
+            <h1 data-i18n="hero.title">
               Turning oncology and clinical data into clear decisions.
             </h1>
-            <p class="lead">
+            <p class="lead" data-i18n="hero.lead">
               I design scalable bioinformatics workflows and analytics solutions
               for pharma and translational research — with a focus on quality,
               reproducibility, and business-ready insights.
             </p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-ghost" href="raw/DanielSchreyer_CV.pdf">Download CV</a>
+              <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
+              <a class="btn btn-ghost" href="raw/DanielSchreyer_CV.pdf" data-i18n="hero.ctaCv">Download CV</a>
             </div>
             <div class="hero-stats">
-              <div><strong>Pharma</strong><span>Industry delivery</span></div>
-              <div><strong>Oncology</strong><span>Core domain</span></div>
-              <div><strong>Pipelines</strong><span>Production-ready</span></div>
+              <div><strong data-i18n="hero.stat1t">Pharma</strong><span data-i18n="hero.stat1s">Industry delivery</span></div>
+              <div><strong data-i18n="hero.stat2t">Oncology</strong><span data-i18n="hero.stat2s">Core domain</span></div>
+              <div><strong data-i18n="hero.stat3t">Pipelines</strong><span data-i18n="hero.stat3s">Production-ready</span></div>
             </div>
           </div>
           <div class="hero-card reveal">
@@ -74,8 +75,8 @@
               decoding="async"
             />
             <h3>Daniel Schreyer</h3>
-            <p>Senior Data Scientist (Pharma/Bioinformatics)</p>
-            <p>Fürth, Bavaria, Germany</p>
+            <p data-i18n="hero.role">Senior Data Scientist (Pharma/Bioinformatics)</p>
+            <p data-i18n="hero.location">Fürth, Bavaria, Germany</p>
           </div>
         </div>
       </section>
@@ -83,21 +84,21 @@
       <section class="section" id="about">
         <div class="container grid-2">
           <div>
-            <h2>About</h2>
-            <p>
+            <h2 data-i18n="about.title">About</h2>
+            <p data-i18n="about.p1">
               I work at the intersection of data science, bioinformatics, and
               oncology-focused pharmaceutical development. My core work includes
               NGS analytics, clinical-trial data interpretation, and pipeline
               engineering for reliable high-throughput analysis.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               With a PhD in Computational Biology and hands-on industry
               experience, I focus on building systems that are technically
               robust and practically useful for cross-functional teams.
             </p>
           </div>
           <div class="panel reveal">
-            <h3>Core Skills</h3>
+            <h3 data-i18n="about.skills">Core Skills</h3>
             <ul class="tags">
               <li>Clinical Data Analysis</li>
               <li>Oncology Analytics</li>
@@ -114,25 +115,25 @@
 
       <section class="section" id="focus">
         <div class="container">
-          <h2>What I focus on</h2>
+          <h2 data-i18n="focus.title">What I focus on</h2>
           <div class="cards-3">
             <article class="card reveal">
-              <h3>Oncology Data Science</h3>
-              <p>
+              <h3 data-i18n="focus.c1t">Oncology Data Science</h3>
+              <p data-i18n="focus.c1p">
                 Integrative analysis of transcriptomic and genomic datasets to
                 support translational decisions and biomarker-oriented insights.
               </p>
             </article>
             <article class="card reveal">
-              <h3>Pipeline Development</h3>
-              <p>
+              <h3 data-i18n="focus.c2t">Pipeline Development</h3>
+              <p data-i18n="focus.c2p">
                 Reproducible, scalable workflows for high-throughput sequencing
                 data with strong quality controls and clear reporting.
               </p>
             </article>
             <article class="card reveal">
-              <h3>Clinical-Trial Context</h3>
-              <p>
+              <h3 data-i18n="focus.c3t">Clinical-Trial Context</h3>
+              <p data-i18n="focus.c3p">
                 Data interpretation and communication tailored to regulated,
                 multidisciplinary environments in pharma-facing projects.
               </p>
@@ -143,7 +144,7 @@
 
       <section class="section" id="experience">
         <div class="container">
-          <h2>Experience</h2>
+          <h2 data-i18n="exp.title">Experience</h2>
           <div class="timeline">
             <article class="reveal">
               <h3>Senior Data Scientist (Bioinformatics focus)</h3>
@@ -177,7 +178,7 @@
 
       <section class="section" id="projects">
         <div class="container">
-          <h2>Selected Projects</h2>
+          <h2 data-i18n="projects.title">Selected Projects</h2>
           <div class="project-grid">
             <a class="project reveal" href="https://github.com/nf-core/circdna" target="_blank" rel="noopener noreferrer">
               <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="nf-core circdna" loading="lazy" decoding="async" />
@@ -209,53 +210,54 @@
 
       <section class="section" id="publications">
         <div class="container">
-          <h2>Selected Publications</h2>
-          <p class="section-intro">
+          <h2 data-i18n="pub.title">Selected Publications</h2>
+          <p class="section-intro" data-i18n="pub.intro">
             Peer-reviewed work in cancer genomics and translational bioinformatics.
           </p>
           <div class="pub-grid">
             <article class="pub-card reveal">
               <div class="pub-top">
                 <span class="venue">Nature</span>
-                <span class="role role-primary">Primary Author</span>
+                <span class="role role-primary" data-i18n="pub.r1">Primary Author</span>
               </div>
               <h3>MYC ecDNA promotes intratumour heterogeneity and plasticity in PDAC</h3>
               <p class="meta">2025 · DOI: 10.1038/s41586-025-08721-9</p>
-              <p>
+              <p data-i18n="pub.p1">
                 Demonstrates how ecDNA amplifications drive tumor heterogeneity and adaptive behavior in pancreatic cancer.
               </p>
               <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://www.nature.com/articles/s41586-025-08721-9" target="_blank" rel="noopener noreferrer">Read paper</a>
+                <a class="btn btn-ghost" href="https://www.nature.com/articles/s41586-025-08721-9" target="_blank" rel="noopener noreferrer" data-i18n="pub.read">Read paper</a>
               </div>
             </article>
 
             <article class="pub-card reveal">
               <div class="pub-top">
                 <span class="venue">PubMed</span>
-                <span class="role">First Author</span>
+                <span class="role" data-i18n="pub.r2">First Author</span>
               </div>
-              <h3>Cancer genomics publication</h3>
+              <h3 data-i18n="pub.t2">Cancer genomics publication</h3>
               <p class="meta">PMID: 35096825</p>
-              <p>
+              <p data-i18n="pub.p2">
                 First-author contribution focused on cancer genomics methodology and analytical interpretation.
               </p>
               <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/35096825/" target="_blank" rel="noopener noreferrer">View on PubMed</a>
+                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/35096825/" target="_blank" rel="noopener noreferrer" data-i18n="pub.pubmed">View on PubMed</a>
               </div>
             </article>
 
             <article class="pub-card reveal">
               <div class="pub-top">
-                <span class="venue">PubMed</span>
-                <span class="role">Second Author</span>
+                <span class="venue">Cell Death Discovery</span>
+                <span class="role" data-i18n="pub.r3">Second Author</span>
               </div>
-              <h3>Translational bioinformatics publication</h3>
-              <p class="meta">PMID: 36681673</p>
-              <p>
+              <h3 data-i18n="pub.t3">Translational bioinformatics publication</h3>
+              <p class="meta">PMID: 36681673 · PMCID: PMC9867742</p>
+              <p data-i18n="pub.p3">
                 Second-author contribution supporting robust translational analysis in oncology research.
               </p>
               <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/36681673/" target="_blank" rel="noopener noreferrer">View on PubMed</a>
+                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/36681673/" target="_blank" rel="noopener noreferrer" data-i18n="pub.pubmed">View on PubMed</a>
+                <a class="btn btn-ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9867742/" target="_blank" rel="noopener noreferrer" data-i18n="pub.fulltext">Read full text</a>
               </div>
             </article>
           </div>
@@ -265,8 +267,8 @@
       <section class="section" id="contact">
         <div class="container contact-wrap">
           <div>
-            <h2>Contact</h2>
-            <p>
+            <h2 data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.p">
               This page provides a focused overview of my background, expertise, and selected work in oncology data science and bioinformatics.
             </p>
             <ul class="contact-list">
@@ -280,18 +282,18 @@
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
             <label>
-              Name
+              <span data-i18n="contact.name">Name</span>
               <input type="text" name="userName" required autocomplete="name" />
             </label>
             <label>
-              Email
+              <span data-i18n="contact.email">Email</span>
               <input type="email" name="userEmail" required autocomplete="email" />
             </label>
             <label>
-              Message
+              <span data-i18n="contact.message">Message</span>
               <textarea name="userMessage" rows="5" required></textarea>
             </label>
-            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send message</button>
           </form>
         </div>
       </section>

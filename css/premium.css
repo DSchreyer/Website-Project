@@ -39,6 +39,7 @@ a:hover { color: #c6dcff; }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
 .nav a:hover { color: var(--text); }
 .menu-btn { display: none; background: transparent; border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: 0.35rem 0.6rem; }
+.lang-btn { background: #101936; color: #d7e3ff; border: 1px solid #314778; border-radius: 999px; padding: 0.35rem 0.7rem; font-weight: 600; cursor: pointer; }
 
 .hero { padding: 6rem 0 4rem; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
@@ -113,7 +114,7 @@ h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -
 .role-primary { background: rgba(121, 240, 212, 0.12); border-color: rgba(121, 240, 212, 0.5); color: var(--accent-2); }
 .pub-card h3 { margin: 0 0 0.5rem; font-size: 1.02rem; line-height: 1.35; }
 .pub-card p { color: var(--muted); margin: 0.45rem 0; }
-.pub-actions { margin-top: 0.8rem; }
+.pub-actions { margin-top: 0.8rem; display: flex; gap: 0.55rem; flex-wrap: wrap; }
 
 .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
 .contact-list { list-style: none; padding: 0; margin: 1rem 0 0; }
