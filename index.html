@@ -2,675 +2,246 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Bioinformatician and Data Scientist specializing in NGS analysis, ecDNA research, and reproducible bioinformatics workflows in academia and industry."
+      content="Daniel Schreyer — Data Scientist and Bioinformatician specializing in oncology analytics, clinical-trial data, and reproducible pipeline development."
     />
     <meta name="author" content="Daniel Schreyer" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#343a40" />
+    <meta name="theme-color" content="#0b1020" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Daniel Schreyer | Bioinformatician"
-    />
+    <meta property="og:title" content="Daniel Schreyer | Data Science & Bioinformatics" />
     <meta
       property="og:description"
-      content="Bioinformatics portfolio with projects, skills, and experience in genomics and oncology."
+      content="Premium portfolio: oncology data science, clinical analytics, and pipeline engineering."
     />
-    <link
-      rel="icon"
-      type="assets/favicon/favicon.png"
-      href="assets/favicon/favicon.png"
-    />
-    <title>Daniel Schreyer | Bioinformatician</title>
-    <!-- Font Awesome icons (free version)-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
-      referrerpolicy="no-referrer"
-      crossorigin="anonymous"
-    />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/pr3-mobile.css" rel="stylesheet" />
-    <script defer src="app.js"></script>
+    <title>Daniel Schreyer | Data Science & Bioinformatics</title>
+    <link href="css/premium.css" rel="stylesheet" />
+    <script defer src="js/premium.js"></script>
   </head>
-
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav
-      class="navbar navbar-expand-lg navbar-light fixed-top py-3"
-      id="mainNav"
-    >
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"
-          >Daniel Schreyer | Bioinformatician</a
-        ><button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto my-2 my-lg-0">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#experiences"
-                >Experience</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead" id="home">
-      <div class="container h-100 flex-container">
-        <div
-          class="column-layout justify-content-center align-items-center text-center mt-0 flex-container"
-        >
-          <div class="left-column text-center">
-            <h1 class="text-uppercase text-white font-weight-bold">
-              Daniel Schreyer
-            </h1>
-            <hr class="divider my-4" />
-            <h3 class="text-primary font-weight-bold">Data Science | Oncology Bioinformatics | Pipeline Development | Clinical Trials</h3>
-          </div>
-          <div class="right-column">
-            <a
-              class="btn btn-primary btn-xl js-scroll-trigger enlarge-on-hover"
-              href="#profile"
-              >Find Out More</a
-            >
-            <a
-              class="btn btn-secondary btn-xl js-scroll-trigger enlarge-on-hover"
-              href="/raw/DanielSchreyer_CV.pdf"
-              >Download CV</a
-            >
-          </div>
-        </div>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">Daniel Schreyer</a>
+        <button class="menu-btn" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="nav">
+          <a href="#about">About</a>
+          <a href="#focus">Focus</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
-    <!-- Profile section-->
-    <section class="page-section bg-dark text-light" id="profile">
-      <div class="container form-inline">
-        <h1 class="text-light text-center mt-0">Profile</h1>
-        <hr class="divider my-4" />
-        <div class="column-layout">
-          <div class="left-column text-justify text-light">
-            <h2>About Me!</h2>
-            <p>
-              I am a Data Scientist and Bioinformatician working at the intersection of oncology, pharmaceutical R&D, and clinical data analytics. My focus is translating high-dimensional biological and trial-related datasets into clear, decision-ready evidence.
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Data Science · Oncology · Pharma</p>
+            <h1>
+              Turning oncology and clinical data into clear decisions.
+            </h1>
+            <p class="lead">
+              I design scalable bioinformatics workflows and analytics solutions
+              for pharma and translational research — with a focus on quality,
+              reproducibility, and business-ready insights.
             </p>
-            <p>
-              I design and maintain reproducible analysis pipelines (including Nextflow-based workflows) for NGS and multi-omics data, with emphasis on robustness, traceability, and scalability for regulated and collaborative environments.
-            </p>
-            <p>
-              In my current pharma-facing work, I support oncology and clinical-trial contexts through pipeline development, data integration, statistical analysis, and communication of results to cross-functional teams.
-            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-ghost" href="raw/DanielSchreyer_CV.pdf">Download CV</a>
+            </div>
           </div>
-          <div class="middle-column">
+          <div class="hero-card">
             <img
-              src="/assets/img/profile/DS_Yolo_cut.webp"
+              src="assets/img/profile/DS_Yolo_cut.webp"
               alt="Portrait of Daniel Schreyer"
+              loading="eager"
               decoding="async"
             />
-          </div>
-          <div class="right-column">
-            <h2>Details</h2>
-            <h3>Name</h3>
-            <p>Daniel Schreyer</p>
-            <h3>Current Role</h3>
+            <h3>Daniel Schreyer</h3>
             <p>Senior Data Scientist (Pharma/Bioinformatics)</p>
-            <h3>Location</h3>
             <p>Buckenhof (Erlangen), Bavaria, Germany</p>
-            <h3>Languages</h3>
-            <p>German (native), English (full professional)</p>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Experiences section-->
-    <section class="page-section-skills bg-light text-white" id="skills">
-      <h2 class="text-center mt-0 text-dark">Skills</h2>
-      <hr class="divider" />
-      <br />
-      <br />
-      <div class="container">
-        <div class="profile-skills margin-fit-skills">
-          <div>
-            <input type="checkbox" id="sk1" />
-            <label for="sk1"></label>
-            <ul class="skills skills1">
-              <li class="sk-r"><span>R</span></li>
-              <li class="sk-python"><span>Python</span></li>
-              <li class="sk-nextflow"><span>Nextflow</span></li>
-              <li class="sk-bash"><span>Bash</span></li>
-              <li class="sk-sql"><span>SQL</span></li>
-              <li class="more">
-                <input type="checkbox" id="more-con" /><label
-                  for="more-con"
-                ></label>
-                <div>
-                  <span>HTML</span><span>CSS</span><span>JavaScript</span
-                  ><span>Perl</span><span>Biopython</span
-                  ><span>Bioconductor</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <input type="checkbox" id="sk2" />
-            <label for="sk2"></label>
-            <ul class="skills skills2">
-              <li class="sk-shiny"><span>R-Shiny</span></li>
-              <li class="sk-machinelearning"><span>Deep Learning</span></li>
-              <li class="sk-containerisation"><span>Containerization</span></li>
-              <li class="sk-git"><span>Git</span></li>
-              <li class="sk-aws"><span>AWS</span></li>
-              <li class="more">
-                <input type="checkbox" id="more-pro" /><label
-                  for="more-pro"
-                ></label>
-                <div>
-                  <span>HPC</span><span>Jupyter Notebook</span><span>Conda</span
-                  ><span>TensorFlow</span><span>Docker</span
-                  ><span>Clinical Data Analysis</span><span>GCP</span><span>Project Management</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <input type="checkbox" id="sk3" />
-            <label for="sk3"></label>
-            <ul class="skills skills3">
-              <li class="sk-genomics"><span>Genomics</span></li>
-              <li class="sk-transcriptomics"><span>Transcriptomics</span></li>
-              <li class="sk-singlecell"><span>Single-cell</span></li>
-              <li class="sk-epigenetics"><span>Epigenomics</span></li>
-              <li class="sk-metabolomics"><span>Metabolomics</span></li>
-              <li class="more">
-                <input type="checkbox" id="more-len" /><label
-                  for="more-len"
-                ></label>
-                <div>
-                  <span>WGS</span><span>WES</span><span>RNA-seq</span
-                  ><span>scRNA-seq</span><span>ATAC-seq</span
-                  ><span>Nanopore</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Experience Section -->
-    <section class="page-section bg-dark" id="experiences">
-      <h2 class="text-center mt-0">Experience</h2>
-      <hr class="divider" />
-      <div class="container">
-        <div class="container hidden">
-          <h3 class="mt-0 text-left">Educational</h3>
-          <hr />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>PhD in Computational/Systems Biology</h4>
-              <p>
-                Researching extrachromosomal circular DNA (ecDNA) in pancreatic cancer with a focus on computational analysis, biological interpretation, and translational relevance.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>University of Glasgow</h5>
-              <p>School of Cancer Sciences</p>
-              <p>Glasgow, United Kingdom</p>
-              <p>Group of Dr. Peter Bailey</p>
-              <p>2020 - 2024</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>M.Sc. Cell and Molecular Biology</h4>
-              <p>
-                Oncology, Immunology, Genetics, Biochemistry, Microbiology,
-                Bioinformatics
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>Friedrich-Alexander-Universität</h5>
-              <p>Faculty of Natural Sciences</p>
-              <p>Erlangen, Germany</p>
-              <p>2017 - 2019</p>
-              <p>Grade: 1.2</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>B.Sc. Biology</h4>
-              <p>Acquire basic knowledge about all fields of biology.</p>
-            </div>
-            <div class="column-location-date">
-              <h5>Friedrich-Alexander-Universität</h5>
-              <p>Faculty of Natural Sciences</p>
-              <p>Erlangen, Germany</p>
-              <p>2014 - 2017</p>
-              <p>Grade: 2.0</p>
-            </div>
-          </div>
-        </div>
-        <div class="container hidden">
-          <h3 class="mt-0 text-left">Practical</h3>
-          <hr class="dark text-left" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>Senior Data Scientist (Bioinformatics focus)</h4>
-              <p>
-                Driving data science and bioinformatics initiatives for pharma use cases, including oncology-focused analyses, clinical data workflows, and reproducible pipeline development for high-throughput datasets.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>Staburo GmbH</h5>
-              <p>Munich, Germany (Hybrid)</p>
-              <p>01/2026 - Present</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>Industry Secondment (Bioinformatics)</h4>
-              <p>
-                Performed oncology-focused sequencing analyses in a pharma environment, supporting biomarker-oriented interpretation, workflow handover, and cross-team knowledge transfer.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>AstraZeneca</h5>
-              <p>AstraZeneca, Cambridge</p>
-              <p>01/2023 - 02/2023</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>Research Secondment</h4>
-              <p>
-                Integrated multi-source sequencing data to investigate cancer cell behavior under stress and support translational oncology hypotheses.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>University of Verona</h5>
-              <p>University of Verona, Verona, Italy</p>
-              <p>03/2022 - 04/2022</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>Data visualization and management</h4>
-              <p>
-                Developed R scripts for visualization and QC reporting in a genotype imputation pipeline.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>Research Intern</h5>
-              <p>Group of Prof. Nicola Mulder</p>
-              <p>Computational Biology Division</p>
-              <p>University of Cape Town, South Africa</p>
-              <p class="">10/2018 - 12/2018</p>
-            </div>
-          </div>
-          <hr class="dashed hidden" />
-          <div class="column-layout hidden">
-            <div class="column-details">
-              <h4>Microscopy & Nanopore Sequencing</h4>
-              <p>
-                Performed microscopy-based blood smear analysis and Nanopore sequencing workflows for viral genomes.
-              </p>
-            </div>
-            <div class="column-location-date">
-              <h5>Working Student</h5>
-              <p>Siemens Healthineers</p>
-              <p>Erlangen, Germany</p>
-              <p class="">01/2018 - 09/2018</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects section-->
-    <section class="page-section bg-light" id="projects">
-      <h2 class="text-center mt-0">Projects</h2>
-      <hr class="divider" />
-      <br />
-      <br />
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://github.com/nf-core/circdna"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="assets/img/portfolio/projects/nf-core_logo.webp"
-                  alt="nf-core project logo"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">nf-core/circdna</h3>
-            </a>
-            <p class="text-muted mb-0">
-              Production-grade Nextflow pipeline for ecDNA detection from high-throughput sequencing data, designed for reproducibility, scalability, and collaborative research workflows.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://dschreyer.shinyapps.io/pdac_gene_info"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="/assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp"
-                  alt="Pancreatic Cancer Gene Analysis app screenshot"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">Pancreatic Cancer Gene Analysis</h3>
-            </a>
-            <p class="text-muted mb-0">
-              Interactive data-science application for pancreatic cancer cohorts, combining transcriptomics, clinical context, and hypothesis-driven exploratory analysis.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://github.com/DSchreyer/random-wallpaper"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="assets/img/portfolio/projects/webcrawler.webp"
-                  alt="Reddit wallpaper scraper project logo"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">Reddit Wallpaper Scraper</h3>
-            </a>
-            <p class="text-muted mb-0">
-              Automation script that downloads and organizes subreddit images into a local target directory.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://github.com/DSchreyer/SCPP"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle-90"
-                  src="assets/img/portfolio/projects/SCPP_logo.webp"
-                  alt="Single-cell processing pipeline logo"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">scRNA-seq Processing Pipeline</h3>
-            </a>
-            <p class="text-muted mb-0">
-              A Bash-based pipeline for processing scRNA-seq datasets and producing analysis-ready outputs for downstream interpretation.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://www.researchgate.net/profile/Daniel-Schreyer/research"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="assets/img/portfolio/projects/science_book.webp"
-                  alt="Scientific data analysis project icon"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">Data analysis for Science</h3>
-            </a>
-            <p class="text-muted mb-0">
-              Bioinformatics-driven analysis of high-throughput datasets to test scientific hypotheses and generate publication-ready outputs.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="assets/img/portfolio/projects/ai_logo.webp"
-            >
-              <div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="assets/img/portfolio/projects/ai_logo.webp"
-                  alt="Deep learning projects icon"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">Deep Learning Projects</h3>
-            </a>
-            <p class="text-muted mb-0">
-              Selected deep-learning projects in Python focused on practical classification and generation tasks.
-            </p>
-          </div>
-          <div class="project-column">
-            <a
-              class="centered-content"
-              href="https://github.com/DSchreyer/Website-Project"
-              ><div class="projects-box">
-                <img
-                  class="img-circle"
-                  src="assets/img/portfolio/projects/website_project.webp"
-                  alt="Website project icon"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="h4 mb-2">My Website</h3>
-            </a>
-            <p class="text-muted mb-0">
-              This website was built with HTML, CSS, and JavaScript to present my background, projects, and strengths.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Call to action section-->
-    <section class="page-section bg-dark text-white">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-title">
-                <span>CONTACT</span>
-                <span>ME</span>
-              </div>
-            </div>
-            <div class="screen-body-item">
-              <form
-                id="contactForm"
-                method="POST"
-                action="https://formsubmit.co/ds.danielschreyer@gmail.com"
-              >
-                <input type="hidden" name="_subject" value="New website contact request" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
-                <div class="app-form">
-                  <div class="app-form-group">
-                    <input
-                      class="app-form-control"
-                      name="userName"
-                      type="text"
-                      autocomplete="name"
-                      placeholder="Name*"
-                      required
-                    />
-                  </div>
-                  <div class="app-form-group">
-                    <input
-                      class="app-form-control"
-                      name="userEmail"
-                      type="email"
-                      autocomplete="email"
-                      placeholder="E-mail*"
-                      required
-                    />
-                  </div>
-                  <div class="app-form-group">
-                    <input
-                      class="app-form-control"
-                      placeholder="Contact No"
-                      name="userNumber"
-                      type="tel"
-                      autocomplete="tel"
-                    />
-                  </div>
-                  <div class="app-form-group message">
-                    <textarea
-                      class="app-form-control"
-                      name="userMessage"
-                      placeholder="Message*"
-                      oninput="autoExpand(this)"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="app-form-group buttons">
-                    <button type="submit" class="app-form-button">SEND</button>
-                  </div>
-                  <p class="form-required-notice">* Required fields</p>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact section-->
-    <section class="page-section" id="contact">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Contact</h2>
-          <hr class="divider my-4" />
-        </div>
-      </div>
+      </section>
 
-      <ul>
-        <li>
-          <div class="warp contact contact-github">
-            <i class="fa-brands fa-3x fa-fw fa-square-github text-dark"></i>
-            <a href="https://github.com/DSchreyer/">www.github.com/DSchreyer</a>
+      <section class="section" id="about">
+        <div class="container grid-2">
+          <div>
+            <h2>About</h2>
+            <p>
+              I work at the intersection of data science, bioinformatics, and
+              oncology-focused pharmaceutical development. My core work includes
+              NGS analytics, clinical-trial data interpretation, and pipeline
+              engineering for reliable high-throughput analysis.
+            </p>
+            <p>
+              With a PhD in Computational Biology and hands-on industry
+              experience, I focus on building systems that are technically
+              robust and practically useful for cross-functional teams.
+            </p>
           </div>
-        </li>
-        <li>
-          <div class="warp contact contact-linkedin">
-            <i class="fa-brands fa-3x fa-fw fa-linkedin text-dark"></i>
-            <a href="https://linkedin.com/in/daniel-schreyer"
-              >www.linkedin.com/in/daniel-schreyer</a
-            >
+          <div class="panel">
+            <h3>Core Skills</h3>
+            <ul class="tags">
+              <li>Clinical Data Analysis</li>
+              <li>Oncology Analytics</li>
+              <li>NGS Workflows</li>
+              <li>Nextflow Pipelines</li>
+              <li>R / Python</li>
+              <li>Data Visualization</li>
+              <li>GCP-aware Delivery</li>
+              <li>Project Management</li>
+            </ul>
           </div>
-        </li>
-        <li>
-          <div class="warp contact contact-mail">
-            <i
-              class="fa-solid fa-fw fa-3x fa-regular fa-envelope text-dark"
-            ></i>
-            <a href="mailto:ds.danielschreyer@gmail.com"
-              >ds.danielschreyer@gmail.com</a
-            >
-          </div>
-        </li>
-        <li>
-          <div class="warp contact">
-            <i class="fas fa-3x fa-fw fa-house text-dark"></i>
-            <a
-              href="https://www.google.com/maps/place/Erlangen/data=!4m2!3m1!1s0x47a1f8c7d57c34a1:0x41eda32beb5c7d0?sa=X&ved=2ahUKEwjQ__XUkpGDAxVJgP0HHX-1C3sQ8gF6BAgQEAA"
-              >Erlangen, Germany</a
-            >
-          </div>
-        </li>
-      </ul>
-    </section>
-    <!-- Footer-->
-    <footer class="bg-dark py-5">
-      <div class="container">
-        <div class="small text-center text-white">
-          Copyright © 2023–2026 Daniel Schreyer
         </div>
-        <div class="small text-center text-white">
+      </section>
+
+      <section class="section" id="focus">
+        <div class="container">
+          <h2>What I focus on</h2>
+          <div class="cards-3">
+            <article class="card">
+              <h3>Oncology Data Science</h3>
+              <p>
+                Integrative analysis of transcriptomic and genomic datasets to
+                support translational decisions and biomarker-oriented insights.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Pipeline Development</h3>
+              <p>
+                Reproducible, scalable workflows for high-throughput sequencing
+                data with strong quality controls and clear reporting.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Clinical-Trial Context</h3>
+              <p>
+                Data interpretation and communication tailored to regulated,
+                multidisciplinary environments in pharma-facing projects.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <article>
+              <h3>Senior Data Scientist (Bioinformatics focus)</h3>
+              <p class="meta">Staburo GmbH · Munich (Hybrid) · 2026–Present</p>
+              <p>
+                Leading oncology-oriented analytics and pipeline initiatives for
+                pharma use cases, including clinical data workflows and
+                decision-ready reporting.
+              </p>
+            </article>
+            <article>
+              <h3>Data Scientist (Bioinformatics focus)</h3>
+              <p class="meta">Staburo GmbH · 2024–2026</p>
+              <p>
+                Delivered data-driven bioinformatics analyses in industry
+                settings, connecting technical execution with practical business
+                impact.
+              </p>
+            </article>
+            <article>
+              <h3>PhD, Computational/Systems Biology</h3>
+              <p class="meta">University of Glasgow · 2020–2024</p>
+              <p>
+                Investigated extrachromosomal circular DNA (ecDNA) in pancreatic
+                cancer and contributed to high-impact translational research.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <h2>Selected Projects</h2>
+          <div class="project-grid">
+            <a class="project" href="https://github.com/nf-core/circdna">
+              <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="nf-core circdna" loading="lazy" decoding="async" />
+              <div>
+                <h3>nf-core/circdna</h3>
+                <p>Production-grade Nextflow pipeline for ecDNA analysis from high-throughput data.</p>
+              </div>
+            </a>
+            <a class="project" href="https://dschreyer.shinyapps.io/pdac_gene_info">
+              <img src="assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp" alt="Pancreatic Cancer Gene Analysis" loading="lazy" decoding="async" />
+              <div>
+                <h3>Pancreatic Cancer Data App</h3>
+                <p>Interactive transcriptomics and clinical-context exploration for oncology hypotheses.</p>
+              </div>
+            </a>
+            <a class="project" href="https://github.com/DSchreyer/SCPP">
+              <img src="assets/img/portfolio/projects/SCPP_logo.webp" alt="SCPP Pipeline" loading="lazy" decoding="async" />
+              <div>
+                <h3>scRNA-seq Processing Pipeline</h3>
+                <p>Workflow automation for single-cell sequencing with analysis-ready outputs.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-wrap">
+          <div>
+            <h2>Contact</h2>
+            <p>
+              Open to selected collaborations in oncology analytics,
+              bioinformatics workflow development, and pharma data science.
+            </p>
+            <ul class="contact-list">
+              <li><a href="https://github.com/DSchreyer/">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/daniel-schreyer">LinkedIn</a></li>
+              <li><a href="mailto:ds.danielschreyer@gmail.com">ds.danielschreyer@gmail.com</a></li>
+            </ul>
+          </div>
+          <form id="contactForm" method="POST" action="https://formsubmit.co/ds.danielschreyer@gmail.com" class="contact-form">
+            <input type="hidden" name="_subject" value="New website contact request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
+            <label>
+              Name
+              <input type="text" name="userName" required autocomplete="name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="userEmail" required autocomplete="email" />
+            </label>
+            <label>
+              Message
+              <textarea name="userMessage" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>© 2023–2026 Daniel Schreyer</p>
+        <div>
           <a href="impressum.html">Impressum</a>
-        </div>
-        <div class="small text-center text-white">
           <a href="datenschutz.html">Datenschutzerklärung</a>
         </div>
       </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    ></script>
-    <script
-      defer
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-    ></script>
-    <!-- Core theme JS-->
-    <script defer src="js/scripts.js"></script>
   </body>
 </html>
