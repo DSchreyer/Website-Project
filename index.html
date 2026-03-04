@@ -24,15 +24,16 @@
       rel="stylesheet"
     />
     <title>Daniel Schreyer | Data Science & Bioinformatics</title>
-    <link href="css/premium.css?v=20260304b" rel="stylesheet" />
-    <script defer src="js/premium.js?v=20260304b"></script>
+    <link href="css/premium.css?v=20260304c" rel="stylesheet" />
+    <script defer src="js/premium.js?v=20260304c"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#home">Daniel Schreyer</a>
-        <button class="menu-btn" aria-label="Toggle navigation">☰</button>
-        <nav class="nav" id="nav">
+        <button class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">☰</button>
+        <nav class="nav" id="nav" aria-label="Primary">
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#focus" data-i18n="nav.focus">Focus</a>
           <a href="#experience" data-i18n="nav.experience">Experience</a>
@@ -40,14 +41,14 @@
           <a href="#publications" data-i18n="nav.publications">Publications</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
-        <div class="lang-switch" aria-label="Language switcher">
-          <button class="lang-btn" id="langEn" type="button">EN</button>
-          <button class="lang-btn" id="langDe" type="button">DE</button>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" id="langEn" type="button" aria-pressed="true">EN</button>
+          <button class="lang-btn" id="langDe" type="button" aria-pressed="false">DE</button>
         </div>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero" id="home">
         <div class="container hero-grid">
           <div>
@@ -283,7 +284,7 @@
           <form id="contactForm" method="POST" action="https://formsubmit.co/ds.danielschreyer@gmail.com" class="contact-form">
             <input type="hidden" name="_subject" value="New website contact request" />
             <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
+            <input type="text" name="_honey" hidden tabindex="-1" autocomplete="off" />
             <label>
               <span data-i18n="contact.name">Name</span>
               <input type="text" name="userName" required autocomplete="name" />

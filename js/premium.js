@@ -1,12 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".menu-btn");
   const nav = document.getElementById("nav");
+  const langEn = document.getElementById("langEn");
+  const langDe = document.getElementById("langDe");
+
+  const getStoredLang = () => {
+    try {
+      return localStorage.getItem("siteLang");
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const setStoredLang = (lang) => {
+    try {
+      localStorage.setItem("siteLang", lang);
+    } catch (error) {
+      // Ignore storage errors (e.g., private mode restrictions)
+    }
+  };
+
+  const setMenuExpanded = (expanded) => {
+    if (!menuBtn || !nav) return;
+    nav.classList.toggle("show", expanded);
+    menuBtn.setAttribute("aria-expanded", String(expanded));
+  };
 
   if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => nav.classList.toggle("show"));
+    menuBtn.addEventListener("click", () => {
+      const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      setMenuExpanded(!isExpanded);
+    });
+
     nav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => nav.classList.remove("show"))
+      a.addEventListener("click", () => setMenuExpanded(false))
     );
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenuExpanded(false);
+    });
   }
 
   const translations = {
@@ -124,9 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const langEn = document.getElementById("langEn");
-  const langDe = document.getElementById("langDe");
-
   const applyLang = (lang) => {
     const dict = translations[lang] || translations.en;
     document.documentElement.lang = lang;
@@ -134,20 +163,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = el.dataset.i18n;
       if (dict[key]) el.textContent = dict[key];
     });
+
     if (langEn && langDe) {
-      langEn.classList.toggle("active", lang === "en");
-      langDe.classList.toggle("active", lang === "de");
+      const isEn = lang === "en";
+      langEn.classList.toggle("active", isEn);
+      langDe.classList.toggle("active", !isEn);
+      langEn.setAttribute("aria-pressed", String(isEn));
+      langDe.setAttribute("aria-pressed", String(!isEn));
     }
-    localStorage.setItem("siteLang", lang);
+
+    setStoredLang(lang);
   };
 
   if (langEn) langEn.addEventListener("click", () => applyLang("en"));
   if (langDe) langDe.addEventListener("click", () => applyLang("de"));
 
-  applyLang(localStorage.getItem("siteLang") || "en");
+  applyLang(getStoredLang() || "en");
 
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const reveals = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && reveals.length) {
+  if (!prefersReducedMotion && "IntersectionObserver" in window && reveals.length) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -175,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = form.querySelector('textarea[name="userMessage"]');
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const lang = localStorage.getItem("siteLang") || "en";
+    const lang = getStoredLang() || "en";
     const dict = translations[lang] || translations.en;
 
     if (!name.value.trim()) return alert(dict["alert.name"]);
