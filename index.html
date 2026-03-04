@@ -7,6 +7,18 @@
       content="Daniel Schreyer's professional bioinformatics portfolio."
     />
     <meta name="author" content="Daniel Schreyer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#343a40" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Daniel Schreyer | Bioinformatician"
+    />
+    <meta
+      property="og:description"
+      content="Bioinformatics portfolio with projects, skills, and experience in genomics and oncology."
+    />
     <link
       rel="icon"
       type="assets/favicon/favicon.png"
@@ -17,8 +29,11 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+      referrerpolicy="no-referrer"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
       rel="stylesheet"
@@ -29,7 +44,6 @@
       type="text/css"
     />
     <link href="css/styles.css" rel="stylesheet" />
-    <base target="_blank" />
     <script defer src="app.js"></script>
   </head>
 
@@ -136,7 +150,11 @@
             </p>
           </div>
           <div class="middle-column">
-            <img src="/assets/img/profile/DS_Yolo_cut.jpeg" alt="" />
+            <img
+              src="/assets/img/profile/DS_Yolo_cut.jpeg"
+              alt="Portrait of Daniel Schreyer"
+              decoding="async"
+            />
           </div>
           <div class="right-column">
             <h2>Details</h2>
@@ -368,7 +386,9 @@
                 <img
                   class="img-circle"
                   src="assets/img/portfolio/projects/nf-core_logo.png"
-                  alt=""
+                  alt="nf-core project logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">nf-core/circdna</h3>
@@ -388,7 +408,9 @@
                 <img
                   class="img-circle"
                   src="/assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.png"
-                  alt=""
+                  alt="Pancreatic Cancer Gene Analysis app screenshot"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">Pancreatic Cancer Gene Analysis</h3>
@@ -408,7 +430,9 @@
                 <img
                   class="img-circle"
                   src="assets/img/portfolio/projects/webcrawler.png"
-                  alt=""
+                  alt="Reddit wallpaper scraper project logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">Reddit Wallpaper Scraper</h3>
@@ -427,7 +451,9 @@
                 <img
                   class="img-circle-90"
                   src="assets/img/portfolio/projects/SCPP_logo.png"
-                  alt=""
+                  alt="Single-cell processing pipeline logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">A scRNA-seq Processing Pipeline</h3>
@@ -446,7 +472,9 @@
                 <img
                   class="img-circle"
                   src="assets/img/portfolio/projects/science_book.png"
-                  alt=""
+                  alt="Scientific data analysis project icon"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">Data analysis for Science</h3>
@@ -465,7 +493,9 @@
                 <img
                   class="img-circle"
                   src="assets/img/portfolio/projects/ai_logo.png"
-                  alt=""
+                  alt="Deep learning projects icon"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">Deep Learning Projects</h3>
@@ -483,7 +513,9 @@
                 <img
                   class="img-circle"
                   src="assets/img/portfolio/projects/website_project.png"
-                  alt=""
+                  alt="Website project icon"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="h4 mb-2">My Website</h3>
@@ -526,6 +558,8 @@
                     <input
                       class="app-form-control"
                       name="userName"
+                      type="text"
+                      autocomplete="name"
                       placeholder="Name*"
                       required
                     />
@@ -534,6 +568,8 @@
                     <input
                       class="app-form-control"
                       name="userEmail"
+                      type="email"
+                      autocomplete="email"
                       placeholder="E-mail*"
                       required
                     />
@@ -543,6 +579,8 @@
                       class="app-form-control"
                       placeholder="Contact No"
                       name="userNumber"
+                      type="tel"
+                      autocomplete="tel"
                     />
                   </div>
                   <div class="app-form-group message">
@@ -551,6 +589,7 @@
                       name="userMessage"
                       placeholder="Message*"
                       oninput="autoExpand(this)"
+                      required
                     ></textarea>
                   </div>
                   <div class="app-form-group buttons">
