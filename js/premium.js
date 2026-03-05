@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "pub.fulltext": "Read full text",
       "contact.title": "Contact",
       "contact.p": "This page provides a focused overview of my background, expertise, and selected work in oncology data science and bioinformatics.",
-      "contact.intent": "Open to selected consulting, collaboration, and pharma analytics requests.",
+      "contact.intent": "Profile overview, selected work, and publication highlights in oncology data science and bioinformatics.",
       "contact.ctaMail": "Email me",
       "contact.ctaLinkedIn": "Connect on LinkedIn",
       "contact.formTitle": "Start a conversation",
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "pub.fulltext": "Volltext lesen",
       "contact.title": "Kontakt",
       "contact.p": "Diese Seite bietet einen kompakten Überblick über meinen Hintergrund, meine Schwerpunkte und ausgewählte Arbeiten in Onkologie-Data-Science und Bioinformatik.",
-      "contact.intent": "Offen für ausgewählte Beratungs-, Kollaborations- und Pharma-Analytics-Anfragen.",
+      "contact.intent": "Profilüberblick, ausgewählte Arbeiten und Publikations-Highlights in Onkologie-Data-Science und Bioinformatik.",
       "contact.ctaMail": "E-Mail schreiben",
       "contact.ctaLinkedIn": "Auf LinkedIn vernetzen",
       "contact.formTitle": "Gespräch starten",
@@ -221,6 +221,38 @@ document.addEventListener("DOMContentLoaded", () => {
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add("in-view"));
+  }
+
+  const sections = Array.from(document.querySelectorAll("main .section, main .hero"));
+  const railProgress = document.getElementById("railProgress");
+  const railDots = Array.from(document.querySelectorAll(".rail-dots a"));
+
+  const setActiveRail = () => {
+    const y = window.scrollY + window.innerHeight * 0.35;
+    let active = "home";
+    sections.forEach((sec) => {
+      if (sec.offsetTop <= y) active = sec.id || active;
+    });
+    railDots.forEach((dot) => {
+      dot.classList.toggle("active", dot.dataset.rail === active);
+    });
+    if (railProgress) {
+      const doc = document.documentElement;
+      const total = Math.max(1, doc.scrollHeight - window.innerHeight);
+      const pct = Math.min(100, Math.max(0, (window.scrollY / total) * 100));
+      railProgress.style.height = `${pct}%`;
+    }
+  };
+
+  if (sections.length) {
+    const secObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("in-view");
+      });
+    }, { threshold: 0.18 });
+    sections.forEach((sec) => secObserver.observe(sec));
+    window.addEventListener("scroll", setActiveRail, { passive: true });
+    setActiveRail();
   }
 
   const form = document.getElementById("contactForm");
