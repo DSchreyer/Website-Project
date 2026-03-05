@@ -7,6 +7,9 @@
   --accent: #6aa9ff;
   --accent-2: #79f0d4;
   --line: #223055;
+  --motion-fast: 180ms;
+  --motion-base: 360ms;
+  --motion-slow: 700ms;
 }
 
 * { box-sizing: border-box; }
@@ -121,7 +124,7 @@ a:hover { color: #c6dcff; }
   opacity: 0.2;
   transform: translateY(24px) scale(0.985);
   filter: blur(5px);
-  transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease;
+  transition: opacity var(--motion-slow) ease, transform var(--motion-slow) ease, filter var(--motion-slow) ease;
 }
 .section.in-view {
   opacity: 1;
@@ -151,7 +154,7 @@ a:hover { color: #c6dcff; }
 .hero { padding: 6rem 0 4rem; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; }
 .eyebrow { color: var(--accent-2); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; font-size: 0.82rem; }
-h1 { font-size: clamp(2.15rem, 4.2vw, 3.5rem); line-height: 1.1; margin: 0.6rem 0 1rem; letter-spacing: -0.02em; }
+h1 { font-family: "Space Grotesk", "Inter", sans-serif; font-size: clamp(2.35rem, 4.8vw, 4.2rem); line-height: 1.05; margin: 0.6rem 0 1rem; letter-spacing: -0.03em; }
 .lead { color: var(--muted); max-width: 64ch; font-size: 1.05rem; }
 .hero-cta { display: flex; gap: 0.8rem; margin-top: 1.4rem; flex-wrap: wrap; }
 .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 1.2rem; }
@@ -178,7 +181,7 @@ h1 { font-size: clamp(2.15rem, 4.2vw, 3.5rem); line-height: 1.1; margin: 0.6rem 
 .hero-card h3 { margin: 0.3rem 0; }
 .hero-card p { margin: 0.25rem 0; color: var(--muted); }
 
-h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -0.01em; }
+h2 { font-family: "Space Grotesk", "Inter", sans-serif; font-size: clamp(1.55rem, 2.8vw, 2.3rem); margin: 0 0 1rem; letter-spacing: -0.015em; }
 .section-intro { margin-top: -0.2rem; margin-bottom: 1.2rem; color: var(--muted); max-width: 62ch; }
 .trust-strip { padding-top: 1.2rem; }
 .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
@@ -249,6 +252,17 @@ h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -
 .case-card div { padding: 1rem; }
 .case-line { color: var(--accent-2); font-size: 0.82rem; margin: 0.5rem 0 0.2rem; }
 
+.snapshot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.snapshot-card {
+  background: linear-gradient(180deg, #111a33, #0f1730);
+  border: 1px solid #2c4273;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.snapshot-card h3 { text-transform: capitalize; margin-top: 0.2rem; margin-bottom: 0.6rem; }
+.snapshot-card p { color: var(--muted); margin: 0.35rem 0; }
+
 .pub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .pub-card {
   background: linear-gradient(180deg, #121b34, #0f1730);
@@ -312,7 +326,7 @@ h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -
 .case-card,
 .pub-card,
 .contact-form {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease, border-color var(--motion-base) ease;
 }
 
 .panel:hover,
@@ -336,7 +350,7 @@ h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -
   .rail-line { height: 170px; }
   .mobile-progress { display: block; }
   .hero-grid, .grid-2, .contact-wrap { grid-template-columns: 1fr; }
-  .cards-3, .project-grid, .pub-grid, .trust-grid, .case-grid { grid-template-columns: 1fr 1fr; }
+  .cards-3, .project-grid, .pub-grid, .trust-grid, .case-grid, .snapshot-grid { grid-template-columns: 1fr 1fr; }
   .case-feature { grid-template-columns: 180px 1fr; }
   .hero-stats { grid-template-columns: 1fr 1fr 1fr; }
 }
@@ -345,7 +359,7 @@ h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 1rem; letter-spacing: -
   .menu-btn { display: inline-block; }
   .nav { display: none; position: absolute; top: 58px; right: 4%; background: #0d1428; border: 1px solid var(--line); border-radius: 12px; padding: 0.8rem; flex-direction: column; }
   .nav.show { display: flex; }
-  .cards-3, .project-grid, .pub-grid, .hero-stats, .trust-grid, .case-grid { grid-template-columns: 1fr; }
+  .cards-3, .project-grid, .pub-grid, .hero-stats, .trust-grid, .case-grid, .snapshot-grid { grid-template-columns: 1fr; }
   .case-feature { grid-template-columns: 1fr; }
 }
 
