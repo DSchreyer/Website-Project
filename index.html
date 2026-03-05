@@ -3,387 +3,184 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Daniel Schreyer — Data Scientist and Bioinformatician specializing in oncology analytics, clinical-trial data, and reproducible pipeline development."
-    />
-    <meta name="author" content="Daniel Schreyer" />
-    <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#0b1020" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Daniel Schreyer | Data Science & Bioinformatics" />
-    <meta
-      property="og:description"
-      content="Premium portfolio: oncology data science, clinical analytics, and pipeline engineering."
-    />
+    <meta name="description" content="Portfolio website" />
+    <meta name="theme-color" content="#0f1015" />
+    <title>Daniel Schreyer — Portfolio</title>
     <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Daniel Schreyer | Data Science & Bioinformatics</title>
-    <link href="css/premium.css?v=20260305f" rel="stylesheet" />
-    <script defer src="js/premium.js?v=20260305f"></script>
+    <link href="css/premium.css?v=20260305g" rel="stylesheet" />
+    <script defer src="js/premium.js?v=20260305g"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-rail" aria-hidden="true">
       <div class="rail-line"><span id="railProgress"></span></div>
       <div class="rail-dots">
         <a href="#home" data-rail="home"></a>
+        <a href="#work" data-rail="work"></a>
         <a href="#about" data-rail="about"></a>
-        <a href="#focus" data-rail="focus"></a>
-        <a href="#experience" data-rail="experience"></a>
-        <a href="#projects" data-rail="projects"></a>
-        <a href="#cases" data-rail="cases"></a>
-        <a href="#publications" data-rail="publications"></a>
+        <a href="#papers" data-rail="papers"></a>
         <a href="#contact" data-rail="contact"></a>
       </div>
     </div>
     <div class="mobile-progress" aria-hidden="true"><span id="mobileProgress"></span></div>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home">Daniel Schreyer</a>
-        <button class="menu-btn" type="button" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">☰</button>
-        <nav class="nav" id="nav" aria-label="Primary">
+
+    <header class="topbar">
+      <div class="wrap nav">
+        <a class="logo" href="#home">Daniel Schreyer</a>
+        <nav id="nav" aria-label="Main navigation">
+          <a href="#work" data-i18n="nav.work">Work</a>
           <a href="#about" data-i18n="nav.about">About</a>
-          <a href="#focus" data-i18n="nav.focus">Focus</a>
-          <a href="#experience" data-i18n="nav.experience">Experience</a>
-          <a href="#projects" data-i18n="nav.projects">Projects</a>
-          <a href="#cases" data-i18n="nav.cases">Case Studies</a>
-          <a href="#publications" data-i18n="nav.publications">Publications</a>
+          <a href="#papers" data-i18n="nav.papers">Publications</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
-        <div class="lang-switch" role="group" aria-label="Language switcher">
-          <button class="lang-btn" id="langEn" type="button" aria-pressed="true">EN</button>
-          <button class="lang-btn" id="langDe" type="button" aria-pressed="false">DE</button>
+        <div class="actions">
+          <button id="langEn" class="lang active" type="button">EN</button>
+          <button id="langDe" class="lang" type="button">DE</button>
+          <button id="menuBtn" class="menu" type="button" aria-label="Toggle menu">☰</button>
         </div>
       </div>
     </header>
 
-    <main id="main-content" class="page-shell">
-      <section class="hero" id="home">
-        <div class="container hero-grid">
+    <main id="main">
+      <section id="home" class="hero section">
+        <div class="wrap hero-grid">
           <div>
-            <p class="eyebrow" data-i18n="hero.eyebrow">Data Science · Oncology · Pharma</p>
-            <h1 data-i18n="hero.title">
-              Data science for oncology, built for clarity and impact.
-            </h1>
-            <p class="lead" data-i18n="hero.lead">
-              I design bioinformatics workflows and analytics systems for pharma and translational research, with focus on reproducibility, quality, and clear interpretation.
+            <p class="label" data-i18n="hero.label">Data Science · Oncology · Bioinformatics</p>
+            <h1 data-i18n="hero.title">Building clear, high-impact data products for complex biomedical workflows.</h1>
+            <p class="subtitle" data-i18n="hero.text">
+              Placeholder text: This section will be refined later with your final narrative. Layout and visual direction are now the focus.
             </p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
-              <a class="btn btn-ghost" href="raw/DanielSchreyer_CV.pdf" data-i18n="hero.ctaCv">Download CV</a>
+              <a class="btn btn-solid" href="#work" data-i18n="hero.cta1">See Recent Projects</a>
+              <a class="btn btn-ghost" href="raw/DanielSchreyer_CV.pdf" data-i18n="hero.cta2">Download CV</a>
             </div>
-
           </div>
-          <div class="hero-card reveal">
-            <img
-              src="assets/img/profile/DS_Yolo_cut.webp"
-              alt="Portrait of Daniel Schreyer"
-              loading="eager"
-              decoding="async"
-            />
-            <h3>Daniel Schreyer</h3>
-            <p data-i18n="hero.role">Senior Data Scientist (Pharma/Bioinformatics)</p>
-            <p data-i18n="hero.location">Fürth, Bavaria, Germany</p>
-          </div>
+          <aside class="profile-card reveal">
+            <img src="assets/img/profile/DS_Yolo_cut.webp" alt="Portrait" />
+            <h2>Daniel Schreyer</h2>
+            <p data-i18n="hero.role">Senior Data Scientist (Bioinformatics)</p>
+            <p>Fürth, Germany</p>
+          </aside>
         </div>
       </section>
 
-      <section class="section trust-strip" id="proof" aria-label="Trust markers">
-        <div class="container trust-grid">
-          <article class="trust-item reveal">
-            <h3 data-i18n="proof.i1t">PhD in Computational Biology</h3>
-            <p data-i18n="proof.i1p">Method-first mindset grounded in translational relevance.</p>
-          </article>
-          <article class="trust-item reveal">
-            <h3 data-i18n="proof.i2t">Nature publication</h3>
-            <p data-i18n="proof.i2p">Primary-author contribution in high-impact oncology research.</p>
-          </article>
-          <article class="trust-item reveal">
-            <h3 data-i18n="proof.i3t">Pharma + academia experience</h3>
-            <p data-i18n="proof.i3p">Comfortable across scientific depth and stakeholder alignment.</p>
-          </article>
-          <article class="trust-item reveal">
-            <h3 data-i18n="proof.i4t">End-to-end pipeline delivery</h3>
-            <p data-i18n="proof.i4p">From raw data to decision-ready outputs.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container grid-2">
-          <div>
-            <h2 data-i18n="about.title">About</h2>
-            <p data-i18n="about.p1">
-              I work at the intersection of data science, bioinformatics, and
-              oncology-focused pharmaceutical development. My core work includes
-              NGS analytics, clinical-trial data interpretation, and pipeline
-              engineering for reliable high-throughput analysis.
-            </p>
-            <p data-i18n="about.p2">
-              With a PhD in Computational Biology and hands-on industry
-              experience, I focus on building systems that are technically
-              robust and practically useful for cross-functional teams.
-            </p>
+      <section id="work" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="work.title">Recent Projects</h2>
+            <p data-i18n="work.text">Placeholder copy. Project storytelling text to be finalized in the next content pass.</p>
           </div>
-          <div class="panel reveal">
-            <h3 data-i18n="about.skills">Core Skills</h3>
-            <ul class="tags">
-              <li>Clinical Data Analysis</li>
-              <li>Oncology Analytics</li>
-              <li>NGS Workflows</li>
-              <li>Nextflow Pipelines</li>
-              <li>R / Python</li>
-              <li>Data Visualization</li>
-              <li>GCP-aware Delivery</li>
-              <li>Project Management</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      <section class="section" id="focus">
-        <div class="container">
-          <h2 data-i18n="focus.title">What I focus on</h2>
-          <div class="cards-3">
-            <article class="card reveal">
-              <h3 data-i18n="focus.c1t">Oncology Data Science</h3>
-              <p data-i18n="focus.c1p">
-                Integrative analysis of transcriptomic and genomic datasets to
-                support translational decisions and biomarker-oriented insights.
-              </p>
-            </article>
-            <article class="card reveal">
-              <h3 data-i18n="focus.c2t">Pipeline Development</h3>
-              <p data-i18n="focus.c2p">
-                Reproducible, scalable workflows for high-throughput sequencing
-                data with strong quality controls and clear reporting.
-              </p>
-            </article>
-            <article class="card reveal">
-              <h3 data-i18n="focus.c3t">Clinical-Trial Context</h3>
-              <p data-i18n="focus.c3p">
-                Data interpretation and communication tailored to regulated,
-                multidisciplinary environments in pharma-facing projects.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="experience">
-        <div class="container">
-          <h2 data-i18n="exp.title">Experience</h2>
-          <div class="timeline">
-            <article class="reveal">
-              <h3>Senior Data Scientist (Bioinformatics focus)</h3>
-              <p class="meta">Staburo GmbH · Munich (Hybrid) · 2026–Present</p>
-              <p>
-                Leading oncology-oriented analytics and pipeline initiatives for
-                pharma use cases, including clinical data workflows and
-                decision-ready reporting.
-              </p>
-            </article>
-            <article class="reveal">
-              <h3>Data Scientist (Bioinformatics focus)</h3>
-              <p class="meta">Staburo GmbH · 2024–2026</p>
-              <p>
-                Delivered data-driven bioinformatics analyses in industry
-                settings, connecting technical execution with practical business
-                impact.
-              </p>
-            </article>
-            <article class="reveal">
-              <h3>PhD, Computational/Systems Biology</h3>
-              <p class="meta">University of Glasgow · 2020–2024</p>
-              <p>
-                Investigated extrachromosomal circular DNA (ecDNA) in pancreatic
-                cancer and contributed to high-impact translational research.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="container">
-          <h2 data-i18n="projects.title">Selected Projects</h2>
-
-          <a class="case-feature reveal" href="https://github.com/nf-core/circdna" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="nf-core circdna" loading="lazy" decoding="async" />
-            <div class="case-content">
-              <p class="case-kicker" data-i18n="projects.featured">Featured Case Study</p>
+          <article class="featured reveal">
+            <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="Project" />
+            <div>
+              <p class="kicker" data-i18n="work.featured">Featured Project</p>
               <h3>nf-core/circdna</h3>
-              <p data-i18n="projects.featuredDesc">Production-grade Nextflow pipeline for ecDNA analysis from high-throughput data.</p>
-              <ul class="project-tags"><li>Nextflow</li><li>NGS</li><li>Reproducible</li></ul>
+              <p data-i18n="work.featuredText">Placeholder: Problem framing, technical approach, and outcomes will be inserted here.</p>
+              <ul class="chips"><li>Nextflow</li><li>NGS</li><li>Reproducible</li></ul>
             </div>
-          </a>
+          </article>
 
-          <div class="case-grid">
-            <a class="case-card reveal" href="https://dschreyer.shinyapps.io/pdac_gene_info" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp" alt="Pancreatic Cancer Data App" loading="lazy" decoding="async" />
+          <div class="cards">
+            <article class="project-card reveal">
+              <img src="assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp" alt="Project" />
               <div>
                 <h3>Pancreatic Cancer Data App</h3>
-                <p class="case-line" data-i18n="projects.problem">Problem:</p>
-                <p data-i18n="projects.p2a">Clinical and transcriptomic signals are hard to explore together.</p>
-                <p class="case-line" data-i18n="projects.outcome">Outcome:</p>
-                <p data-i18n="projects.p2b">Interactive exploration of cohorts with clinical context for faster hypothesis testing.</p>
+                <p class="muted" data-i18n="work.card1">Placeholder summary text for this project card.</p>
               </div>
-            </a>
-
-            <a class="case-card reveal" href="https://github.com/DSchreyer/SCPP" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/portfolio/projects/SCPP_logo.webp" alt="SCPP Pipeline" loading="lazy" decoding="async" />
+            </article>
+            <article class="project-card reveal">
+              <img src="assets/img/portfolio/projects/SCPP_logo.webp" alt="Project" />
               <div>
-                <h3>scRNA-seq Processing Pipeline</h3>
-                <p class="case-line" data-i18n="projects.problem">Problem:</p>
-                <p data-i18n="projects.p3a">Single-cell workflows often break reproducibility across environments.</p>
-                <p class="case-line" data-i18n="projects.outcome">Outcome:</p>
-                <p data-i18n="projects.p3b">Automated, analysis-ready outputs with consistent processing across runs.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="cases">
-        <div class="container">
-          <h2 data-i18n="cases.title">Case Study Snapshots</h2>
-          <p class="section-intro" data-i18n="cases.intro">How I structure delivery from problem framing to reproducible outcomes.</p>
-          <div class="snapshot-grid">
-            <article class="snapshot-card reveal">
-              <h3 data-i18n="cases.c1t">oncology transcriptomics</h3>
-              <p class="case-line" data-i18n="cases.step1">1. Problem framing</p>
-              <p data-i18n="cases.c1a">Define decision scope and relevant clinical/biological variables.</p>
-              <p class="case-line" data-i18n="cases.step2">2. Data + workflow</p>
-              <p data-i18n="cases.c1b">Build reproducible analysis path with quality checks and interpretable outputs.</p>
-              <p class="case-line" data-i18n="cases.step3">3. Outcome</p>
-              <p data-i18n="cases.c1c">Deliver findings that are traceable and directly usable by cross-functional teams.</p>
-            </article>
-            <article class="snapshot-card reveal">
-              <h3 data-i18n="cases.c2t">single-cell pipeline automation</h3>
-              <p class="case-line" data-i18n="cases.step1">1. Problem framing</p>
-              <p data-i18n="cases.c2a">Stabilize inconsistent multi-step processing across environments and runs.</p>
-              <p class="case-line" data-i18n="cases.step2">2. Data + workflow</p>
-              <p data-i18n="cases.c2b">Implement modular workflow blocks with explicit configuration and logging.</p>
-              <p class="case-line" data-i18n="cases.step3">3. Outcome</p>
-              <p data-i18n="cases.c2c">Consistent analysis-ready outputs and lower operational friction for downstream work.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="publications">
-        <div class="container">
-          <h2 data-i18n="pub.title">Selected Publications</h2>
-          <p class="section-intro" data-i18n="pub.intro">
-            Peer-reviewed work in cancer genomics and translational bioinformatics.
-          </p>
-          <div class="pub-grid">
-            <article class="pub-card reveal">
-              <div class="pub-top">
-                <span class="venue">Nature</span>
-                <span class="role role-primary" data-i18n="pub.r1">Primary Author</span>
-              </div>
-              <h3>MYC ecDNA promotes intratumour heterogeneity and plasticity in PDAC</h3>
-              <p class="meta">2025 · DOI: 10.1038/s41586-025-08721-9</p>
-              <p data-i18n="pub.p1">
-                Demonstrates how ecDNA amplifications drive tumor heterogeneity and adaptive behavior in pancreatic cancer.
-              </p>
-              <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://www.nature.com/articles/s41586-025-08721-9" target="_blank" rel="noopener noreferrer" data-i18n="pub.read">Read paper</a>
-              </div>
-            </article>
-
-            <article class="pub-card reveal">
-              <div class="pub-top">
-                <span class="venue">PubMed</span>
-                <span class="role" data-i18n="pub.r2">First Author</span>
-              </div>
-              <h3 data-i18n="pub.t2">Cancer genomics publication</h3>
-              <p class="meta">PMID: 35096825</p>
-              <p data-i18n="pub.p2">
-                First-author contribution focused on cancer genomics methodology and analytical interpretation.
-              </p>
-              <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/35096825/" target="_blank" rel="noopener noreferrer" data-i18n="pub.pubmed">View on PubMed</a>
-              </div>
-            </article>
-
-            <article class="pub-card reveal">
-              <div class="pub-top">
-                <span class="venue">Cell Death Discovery</span>
-                <span class="role" data-i18n="pub.r3">Second Author</span>
-              </div>
-              <h3 data-i18n="pub.t3">Translational bioinformatics publication</h3>
-              <p class="meta">PMID: 36681673 · PMCID: PMC9867742</p>
-              <p data-i18n="pub.p3">
-                Second-author contribution supporting robust translational analysis in oncology research.
-              </p>
-              <div class="pub-actions">
-                <a class="btn btn-ghost" href="https://pubmed.ncbi.nlm.nih.gov/36681673/" target="_blank" rel="noopener noreferrer" data-i18n="pub.pubmed">View on PubMed</a>
-                <a class="btn btn-ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9867742/" target="_blank" rel="noopener noreferrer" data-i18n="pub.fulltext">Read full text</a>
+                <h3>scRNA-seq Pipeline</h3>
+                <p class="muted" data-i18n="work.card2">Placeholder summary text for this project card.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <div class="container contact-wrap">
-          <div>
-            <h2 data-i18n="contact.title">Contact</h2>
-            <p data-i18n="contact.p">
-              This page provides a focused overview of my background, expertise, and selected work in oncology data science and bioinformatics.
-            </p>
-            <p class="contact-intent" data-i18n="contact.intent">
-              Profile overview, selected work, and publication highlights in oncology data science and bioinformatics.
-            </p>
-            <div class="contact-cta">
-              <a class="btn btn-primary" href="mailto:ds.danielschreyer@gmail.com" data-i18n="contact.ctaMail">Email me</a>
-              <a class="btn btn-ghost" href="https://linkedin.com/in/daniel-schreyer" target="_blank" rel="noopener noreferrer" data-i18n="contact.ctaLinkedIn">Connect on LinkedIn</a>
-            </div>
-            <ul class="contact-list">
-              <li><a href="https://github.com/DSchreyer/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/daniel-schreyer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="mailto:ds.danielschreyer@gmail.com">ds.danielschreyer@gmail.com</a></li>
+      <section id="about" class="section">
+        <div class="wrap split">
+          <div class="panel reveal">
+            <h2 data-i18n="about.title">About</h2>
+            <p data-i18n="about.text1">Placeholder paragraph: concise profile text will be added in the content phase.</p>
+            <p data-i18n="about.text2">Placeholder paragraph: this area is intentionally left as draft copy for later refinement.</p>
+          </div>
+          <div class="panel reveal">
+            <h2 data-i18n="about.skills">Core Skills</h2>
+            <ul class="skill-grid">
+              <li>Clinical Data Analysis</li><li>Oncology Analytics</li><li>NGS</li><li>Pipeline Engineering</li>
+              <li>R / Python</li><li>Visualization</li><li>GCP</li><li>Project Delivery</li>
             </ul>
           </div>
-          <form id="contactForm" method="POST" action="https://formsubmit.co/ds.danielschreyer@gmail.com" class="contact-form">
-            <h3 data-i18n="contact.formTitle">Start a conversation</h3>
+        </div>
+      </section>
+
+      <section id="papers" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 data-i18n="papers.title">Selected Publications</h2>
+            <p data-i18n="papers.text">Journal and publication details kept; explanatory text is placeholder for now.</p>
+          </div>
+          <div class="paper-grid">
+            <article class="paper reveal">
+              <span class="tag">Nature</span>
+              <h3>MYC ecDNA promotes intratumour heterogeneity and plasticity in PDAC</h3>
+              <p class="muted">DOI: 10.1038/s41586-025-08721-9</p>
+              <a href="https://www.nature.com/articles/s41586-025-08721-9" target="_blank" rel="noopener noreferrer">Read</a>
+            </article>
+            <article class="paper reveal">
+              <span class="tag">PubMed</span>
+              <h3>Publication — First Author</h3>
+              <p class="muted">PMID: 35096825</p>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/35096825/" target="_blank" rel="noopener noreferrer">Read</a>
+            </article>
+            <article class="paper reveal">
+              <span class="tag">Cell Death Discovery</span>
+              <h3>Publication — Second Author</h3>
+              <p class="muted">PMID: 36681673 · PMCID: PMC9867742</p>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9867742/" target="_blank" rel="noopener noreferrer">Read</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="wrap split">
+          <div class="panel reveal">
+            <h2 data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.text">Placeholder text for contact context and short intro.</p>
+            <p><a href="mailto:ds.danielschreyer@gmail.com">ds.danielschreyer@gmail.com</a></p>
+            <p><a href="https://linkedin.com/in/daniel-schreyer" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          </div>
+          <form id="contactForm" class="panel reveal" method="POST" action="https://formsubmit.co/ds.danielschreyer@gmail.com">
             <input type="hidden" name="_subject" value="New website contact request" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" hidden tabindex="-1" autocomplete="off" />
-            <label>
-              <span data-i18n="contact.name">Name</span>
-              <input type="text" name="userName" required autocomplete="name" />
-            </label>
-            <label>
-              <span data-i18n="contact.email">Email</span>
-              <input type="email" name="userEmail" required autocomplete="email" />
-            </label>
-            <label>
-              <span data-i18n="contact.message">Message</span>
-              <textarea name="userMessage" rows="5" required></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send message</button>
+            <label><span data-i18n="contact.name">Name</span><input type="text" name="userName" required /></label>
+            <label><span data-i18n="contact.email">Email</span><input type="email" name="userEmail" required /></label>
+            <label><span data-i18n="contact.message">Message</span><textarea name="userMessage" rows="5" required></textarea></label>
+            <button class="btn btn-solid" type="submit" data-i18n="contact.send">Send</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-wrap">
-        <p>© 2023–2026 Daniel Schreyer</p>
-        <div class="footer-links">
+    <footer>
+      <div class="wrap foot">
+        <p>© 2026 Daniel Schreyer</p>
+        <div>
           <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutzerklärung</a>
+          <a href="datenschutz.html">Datenschutz</a>
         </div>
-        <p class="build-version" title="Current deployed build">Build v2026.03.05-22</p>
+        <p class="build">Build v2026.03.05-23</p>
       </div>
     </footer>
   </body>
