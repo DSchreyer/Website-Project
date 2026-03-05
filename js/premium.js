@@ -83,6 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "focus.c3p": "Data interpretation and communication tailored to regulated, multidisciplinary environments in pharma-facing projects.",
       "exp.title": "Experience",
       "projects.title": "Selected Projects",
+      "projects.featured": "Featured Case Study",
+      "projects.featuredDesc": "Production-grade Nextflow pipeline for ecDNA analysis from high-throughput data.",
+      "projects.problem": "Problem:",
+      "projects.outcome": "Outcome:",
+      "projects.p2a": "Clinical and transcriptomic signals are hard to explore together.",
+      "projects.p2b": "Interactive exploration of cohorts with clinical context for faster hypothesis testing.",
+      "projects.p3a": "Single-cell workflows often break reproducibility across environments.",
+      "projects.p3b": "Automated, analysis-ready outputs with consistent processing across runs.",
       "pub.title": "Selected Publications",
       "pub.intro": "Peer-reviewed work in cancer genomics and translational bioinformatics.",
       "pub.r1": "Primary Author",
@@ -151,6 +159,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "focus.c3p": "Ich bereite Analysen so auf, dass Ergebnisse in regulierten, interdisziplinären Pharma-Projekten verständlich und entscheidungsrelevant sind.",
       "exp.title": "Erfahrung",
       "projects.title": "Ausgewählte Projekte",
+      "projects.featured": "Ausgewählte Fallstudie",
+      "projects.featuredDesc": "Produktionsreife Nextflow-Pipeline zur ecDNA-Analyse aus Hochdurchsatzdaten.",
+      "projects.problem": "Problem:",
+      "projects.outcome": "Ergebnis:",
+      "projects.p2a": "Klinische und transkriptomische Signale lassen sich oft nur schwer gemeinsam auswerten.",
+      "projects.p2b": "Interaktive Auswertung von Kohorten mit klinischem Kontext für schnelleres Hypothesentesten.",
+      "projects.p3a": "Single-Cell-Workflows verlieren über verschiedene Umgebungen häufig an Reproduzierbarkeit.",
+      "projects.p3b": "Automatisierte, analysefertige Outputs mit konsistenter Verarbeitung über mehrere Läufe.",
       "pub.title": "Ausgewählte Publikationen",
       "pub.intro": "Peer-reviewte Arbeiten aus Krebsgenomik und translationaler Bioinformatik.",
       "pub.r1": "Hauptautor-Beitrag",
@@ -225,7 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sections = Array.from(document.querySelectorAll("main .section, main .hero"));
   const railProgress = document.getElementById("railProgress");
+  const mobileProgress = document.getElementById("mobileProgress");
   const railDots = Array.from(document.querySelectorAll(".rail-dots a"));
+  const navLinks = Array.from(document.querySelectorAll(".nav a"));
 
   const setActiveRail = () => {
     const y = window.scrollY + window.innerHeight * 0.35;
@@ -236,12 +254,15 @@ document.addEventListener("DOMContentLoaded", () => {
     railDots.forEach((dot) => {
       dot.classList.toggle("active", dot.dataset.rail === active);
     });
-    if (railProgress) {
-      const doc = document.documentElement;
-      const total = Math.max(1, doc.scrollHeight - window.innerHeight);
-      const pct = Math.min(100, Math.max(0, (window.scrollY / total) * 100));
-      railProgress.style.height = `${pct}%`;
-    }
+    navLinks.forEach((link) => {
+      const id = (link.getAttribute("href") || "").replace("#", "");
+      link.classList.toggle("active", id === active);
+    });
+    const doc = document.documentElement;
+    const total = Math.max(1, doc.scrollHeight - window.innerHeight);
+    const pct = Math.min(100, Math.max(0, (window.scrollY / total) * 100));
+    if (railProgress) railProgress.style.height = `${pct}%`;
+    if (mobileProgress) mobileProgress.style.width = `${pct}%`;
   };
 
   if (sections.length) {

@@ -41,6 +41,7 @@
         <a href="#contact" data-rail="contact"></a>
       </div>
     </div>
+    <div class="mobile-progress" aria-hidden="true"><span id="mobileProgress"></span></div>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#home">Daniel Schreyer</a>
@@ -216,29 +217,37 @@
       <section class="section" id="projects">
         <div class="container">
           <h2 data-i18n="projects.title">Selected Projects</h2>
-          <div class="project-grid">
-            <a class="project reveal" href="https://github.com/nf-core/circdna" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="nf-core circdna" loading="lazy" decoding="async" />
-              <div>
-                <h3>nf-core/circdna</h3>
-                <p>Production-grade Nextflow pipeline for ecDNA analysis from high-throughput data.</p>
-                <ul class="project-tags"><li>Nextflow</li><li>NGS</li><li>Reproducible</li></ul>
-              </div>
-            </a>
-            <a class="project reveal" href="https://dschreyer.shinyapps.io/pdac_gene_info" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp" alt="Pancreatic Cancer Gene Analysis" loading="lazy" decoding="async" />
+
+          <a class="case-feature reveal" href="https://github.com/nf-core/circdna" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/portfolio/projects/nf-core_logo.webp" alt="nf-core circdna" loading="lazy" decoding="async" />
+            <div class="case-content">
+              <p class="case-kicker" data-i18n="projects.featured">Featured Case Study</p>
+              <h3>nf-core/circdna</h3>
+              <p data-i18n="projects.featuredDesc">Production-grade Nextflow pipeline for ecDNA analysis from high-throughput data.</p>
+              <ul class="project-tags"><li>Nextflow</li><li>NGS</li><li>Reproducible</li></ul>
+            </div>
+          </a>
+
+          <div class="case-grid">
+            <a class="case-card reveal" href="https://dschreyer.shinyapps.io/pdac_gene_info" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/portfolio/projects/pancreatic_cancer_gene_analysis.webp" alt="Pancreatic Cancer Data App" loading="lazy" decoding="async" />
               <div>
                 <h3>Pancreatic Cancer Data App</h3>
-                <p>Interactive transcriptomics and clinical-context exploration for oncology hypotheses.</p>
-                <ul class="project-tags"><li>R Shiny</li><li>Oncology</li><li>Clinical Context</li></ul>
+                <p class="case-line" data-i18n="projects.problem">Problem:</p>
+                <p data-i18n="projects.p2a">Clinical and transcriptomic signals are hard to explore together.</p>
+                <p class="case-line" data-i18n="projects.outcome">Outcome:</p>
+                <p data-i18n="projects.p2b">Interactive exploration of cohorts with clinical context for faster hypothesis testing.</p>
               </div>
             </a>
-            <a class="project reveal" href="https://github.com/DSchreyer/SCPP" target="_blank" rel="noopener noreferrer">
+
+            <a class="case-card reveal" href="https://github.com/DSchreyer/SCPP" target="_blank" rel="noopener noreferrer">
               <img src="assets/img/portfolio/projects/SCPP_logo.webp" alt="SCPP Pipeline" loading="lazy" decoding="async" />
               <div>
                 <h3>scRNA-seq Processing Pipeline</h3>
-                <p>Workflow automation for single-cell sequencing with analysis-ready outputs.</p>
-                <ul class="project-tags"><li>Single-cell</li><li>Automation</li><li>Bash</li></ul>
+                <p class="case-line" data-i18n="projects.problem">Problem:</p>
+                <p data-i18n="projects.p3a">Single-cell workflows often break reproducibility across environments.</p>
+                <p class="case-line" data-i18n="projects.outcome">Outcome:</p>
+                <p data-i18n="projects.p3b">Automated, analysis-ready outputs with consistent processing across runs.</p>
               </div>
             </a>
           </div>
